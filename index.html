@@ -3430,6 +3430,17 @@
     // Product IDs run 1001 onwards. See the PRODUCTS array above for each ID.
   };
 
+  // === REAL PRODUCT IMAGES (auto-mapped from name keywords to relevant photos) ===
+  const _IMG_KW = [['Milo','milo'],['Nescafe','nescafe-coffee'],['Coffee','coffee'],['Carnation','evaporated-milk'],['Ideal','evaporated-milk'],['Nido','milk-powder'],['Cowbell','milk-powder'],['Dano','milk-powder'],['Cerelac','baby-cereal'],['Lactogen','baby-formula'],['Nan ','baby-formula'],['Maggi','bouillon-cube'],['Onga','seasoning-cube'],['Sardine','sardines'],['Tuna','canned-tuna'],['Biscuit','biscuits'],['Cabin','crackers'],['Choco','chocolate'],['Soap','soap-bar'],['Detergent','detergent'],['Omo','laundry-detergent'],['Ariel','laundry-detergent'],['Diaper','diapers'],['Pad','sanitary-pad'],['Toothpaste','toothpaste'],['Pepsodent','toothpaste'],['Brush','toothbrush'],['Coil','mosquito-coil'],['Charcoal','charcoal'],['Mayonnaise','mayonnaise'],['Spaghetti','pasta'],['Pasta','pasta'],['Tea','tea'],['Lipton','tea'],['Malt','malt-drink'],['Shito','chili-sauce'],['Pepper','chili-pepper'],['Blueband','margarine'],['Butter','butter'],['Match','matches'],['Candle','candle'],['Envelope','envelope'],['Yumvita','baby-cereal'],['Golden Morn','cereal'],['Oat','oats'],['Kellog','cereal'],['Tissue','tissue-paper'],['Toilet Roll','toilet-paper'],['Roll','tissue-paper'],['Rubber','rubber-band'],['Bucket','plastic-bucket'],['Razor','razor'],['Shaving','razor'],['Bama','mayonnaise'],['Heinz','canned-beans'],['Bean','beans'],['Polish','floor-polish'],['Glue','glue'],['Sweet','candy'],['Mint','mint-sweets'],['Cake','cake'],['Yogurt','yogurt']];
+  const _CAT_FB = {foodstuff:'groceries',beverages:'drink',household:'household-product',baby:'baby-product',snacks:'snacks'};
+  PRODUCTS.forEach(p => {
+    if (PRODUCT_IMAGES[p.id]) return;
+    let kw = null;
+    for (const [k,v] of _IMG_KW) { if (p.name.toLowerCase().includes(k.toLowerCase())) { kw = v; break; } }
+    if (!kw) kw = _CAT_FB[p.cat] || 'product';
+    PRODUCT_IMAGES[p.id] = 'https://loremflickr.com/600/400/' + kw + '?lock=' + p.id;
+  });
+
   // === RENDER ===
   const grid = document.getElementById('grid');
 
