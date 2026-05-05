@@ -1,0 +1,4433 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketprice Delivery — Wholesale to your door, Accra</title>
+<meta name="description" content="Over 400 wholesale items — milk, drinks, soaps, biscuits, baby food, household essentials — delivered across Accra, Aburi & Koforidua. Pay with MoMo. Order via WhatsApp.">
+<meta name="theme-color" content="#c44d2e">
+<meta property="og:title" content="Marketprice Delivery — Wholesale to your door">
+<meta property="og:description" content="Over 400 wholesale items delivered across Accra. Pay with MoMo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GH">
+<meta property="og:site_name" content="Marketprice Delivery">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&amp;family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f4ede0;
+    --paper-warm: #ede2cc;
+    --terracotta: #c44d2e;
+    --terracotta-deep: #8a3219;
+    --ochre: #e8a838;
+    --forest: #2d5a3d;
+    --kente-gold: #d4a017;
+    --kente-red: #b33024;
+    --kente-green: #1f5c3a;
+    --shadow: rgba(26, 20, 16, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(26,20,16,0.06) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* ===== TOP RIBBON ===== */
+  .ribbon {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ribbon-track {
+    display: inline-block;
+    animation: scroll 40s linear infinite;
+  }
+  .ribbon-track span { padding: 0 24px; }
+  .ribbon-track span::after { content: '✦'; margin-left: 24px; color: var(--kente-gold); }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--paper);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    background: var(--terracotta);
+    position: relative;
+    transform: rotate(-8deg);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .logo-mark::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--ochre);
+    border-radius: 50% 50% 0 50%;
+  }
+  .logo small {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    margin-top: 2px;
+  }
+
+  nav { display: flex; gap: 32px; }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--terracotta); }
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: var(--terracotta);
+    transition: width 0.3s;
+  }
+  nav a:hover::after { width: 100%; }
+
+  .cart-btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 10px 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0 var(--terracotta);
+  }
+  .cart-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--terracotta);
+  }
+  .cart-count {
+    background: var(--ochre);
+    color: var(--ink);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 80px 32px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    padding: 6px 14px;
+    border: 1.5px solid var(--terracotta-deep);
+    border-radius: 40px;
+    margin-bottom: 24px;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--terracotta);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+  }
+  .hero h1 .accent {
+    font-style: italic;
+    color: var(--terracotta);
+    position: relative;
+    display: inline-block;
+  }
+  .hero h1 .accent::after {
+    content: '';
+    position: absolute;
+    bottom: 8px; left: -4px; right: -4px;
+    height: 12px;
+    background: var(--ochre);
+    z-index: -1;
+    transform: skewX(-12deg);
+    opacity: 0.6;
+  }
+  .hero p {
+    font-size: 19px;
+    line-height: 1.5;
+    max-width: 520px;
+    margin-bottom: 36px;
+    color: #4a3f37;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Free delivery badge — visible call-out below hero subhead */
+  .free-delivery-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    margin-bottom: 28px;
+    background: var(--ochre);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+  }
+  .free-delivery-badge .fdb-icon {
+    font-size: 22px;
+    line-height: 1;
+  }
+  .free-delivery-badge .fdb-text strong {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-style: italic;
+    margin-right: 4px;
+  }
+  .btn-primary, .btn-secondary {
+    padding: 16px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid var(--ink);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-primary {
+    background: var(--terracotta);
+    color: var(--paper);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .btn-secondary {
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .btn-primary:hover, .btn-secondary:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+
+  /* Hero product cards */
+  /* === FEATURED HERO CARDS (compact) === */
+  .hero-art {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    align-content: start;
+  }
+  .hp-card {
+    position: relative;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform .2s ease, box-shadow .2s ease;
+    overflow: hidden;
+  }
+  .hp-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--terracotta);
+  }
+  .hp-card:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  /* Slight rotation for hand-arranged feel */
+  .hp-card:nth-child(1) { transform: rotate(-1deg); }
+  .hp-card:nth-child(2) { transform: rotate(1deg); }
+  .hp-card:nth-child(1):hover,
+  .hp-card:nth-child(2):hover {
+    transform: translate(-3px, -3px) rotate(0deg);
+  }
+
+  /* Category-tinted image area */
+  .hp-img {
+    margin: -14px -14px 12px;
+    height: 130px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .hp-icon {
+    font-size: 60px;
+    line-height: 1;
+    filter: drop-shadow(2px 3px 0 rgba(26, 20, 16, 0.15));
+  }
+  .hp-img img {
+    max-width: 80%;
+    max-height: 85%;
+    object-fit: contain;
+  }
+  .hp-cat-food .hp-img { background: linear-gradient(135deg, #f4ede0 0%, #ede2cc 100%); }
+  .hp-cat-bev  .hp-img { background: linear-gradient(135deg, #e8f0e8 0%, #d4e6d8 100%); }
+  .hp-cat-house .hp-img { background: linear-gradient(135deg, #fff4e0 0%, #f5e4c0 100%); }
+  .hp-cat-baby .hp-img { background: linear-gradient(135deg, #fbe6ed 0%, #f0d4dc 100%); }
+
+  /* Tag badge */
+  .hp-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    z-index: 2;
+  }
+
+  .hp-meta { flex: 1; margin-bottom: 10px; }
+  .hp-meta h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  .hp-unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b5d52;
+    margin: 0;
+  }
+  .hp-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1.5px solid rgba(26, 20, 16, 0.12);
+    gap: 8px;
+  }
+  .hp-price {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--terracotta-deep);
+    line-height: 1;
+  }
+  .hp-arrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    color: var(--ink);
+    transition: transform .2s ease;
+  }
+  .hp-card:hover .hp-arrow {
+    transform: translateX(3px);
+    color: var(--terracotta);
+  }
+
+  /* Retail savings display (compact, fits in small cards) */
+  .hp-savings {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+  .hp-retail {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #8a7d70;
+    text-decoration: line-through;
+    text-decoration-color: var(--terracotta);
+    letter-spacing: 0.04em;
+  }
+  .hp-save-tag {
+    background: var(--forest);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    line-height: 1;
+  }
+
+  /* === HERO ACTION BUTTONS (redesigned) === */
+  .hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    padding: 0;
+    background: #25D366;
+    color: #fff;
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-whatsapp:hover {
+    background: #128C3F;
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+  .btn-whatsapp:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .btn-whatsapp svg { flex-shrink: 0; }
+
+  .btn-call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-call:hover {
+    background: var(--ochre);
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+  .btn-call:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+
+  /* Kente strip */
+  .kente-strip {
+    height: 14px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--kente-gold) 0, var(--kente-gold) 30px,
+      var(--ink) 30px, var(--ink) 34px,
+      var(--kente-red) 34px, var(--kente-red) 60px,
+      var(--ink) 60px, var(--ink) 64px,
+      var(--kente-green) 64px, var(--kente-green) 94px,
+      var(--ink) 94px, var(--ink) 98px
+    );
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+
+  /* ===== HOT BUYS — horizontal scroll strip ===== */
+  .hot-section {
+    background: var(--paper-warm);
+    padding: 50px 0 60px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .hot-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .hot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 32px;
+    margin-bottom: 28px;
+    gap: 16px;
+  }
+  .hot-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    margin-bottom: 8px;
+  }
+  .hot-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .hot-title em {
+    color: var(--terracotta);
+    font-style: italic;
+  }
+  .hot-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #6b5d52;
+    margin: 10px 0 0;
+    max-width: 520px;
+  }
+  .hot-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    opacity: 0.7;
+    padding-bottom: 6px;
+  }
+  .hot-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    padding: 4px 32px 16px;
+  }
+  .hot-card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .hot-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--terracotta);
+  }
+  .hot-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--terracotta);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .hot-img {
+    height: 130px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background: linear-gradient(135deg, #f4ede0 0%, #ede2cc 100%);
+  }
+  .hot-img img { max-width: 80%; max-height: 85%; object-fit: contain; }
+  .hot-body {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .hot-name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 4px;
+  }
+  .hot-unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: #6b5d52;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .hot-foot {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .hot-savings {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .hot-retail {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #8a7d70;
+    text-decoration: line-through;
+    text-decoration-color: var(--terracotta);
+    letter-spacing: 0.04em;
+  }
+  .hot-save-tag {
+    background: var(--forest);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    line-height: 1;
+  }
+  .hot-price {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--terracotta-deep);
+  }
+  .hot-add-btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 8px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .hot-add-btn:hover { background: var(--terracotta); }
+  .hot-add-btn.added { background: var(--forest); }
+
+  /* Tablet: 4 columns */
+  @media (max-width: 1100px) {
+    .hot-strip { grid-template-columns: repeat(4, 1fr); }
+  }
+  /* Small tablet: 3 columns */
+  @media (max-width: 900px) {
+    .hot-strip { grid-template-columns: repeat(3, 1fr); }
+  }
+  /* Mobile: 2 columns */
+  @media (max-width: 700px) {
+    .hot-section { padding: 40px 0 50px; }
+    .hot-header { padding: 0 16px; }
+    .hot-strip {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 4px 16px 16px;
+      gap: 12px;
+    }
+    .hot-img { height: 110px; font-size: 48px; }
+    .hot-name { font-size: 14px; }
+    .hot-price { font-size: 16px; }
+    .hot-hint { display: none; }
+  }
+
+  /* ===== DISCOUNTS SECTION ===== */
+.code-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+/* ===== CATEGORY TABS ===== */
+  .shop-section {
+    padding: 80px 32px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .section-header {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .section-title em {
+    color: var(--terracotta);
+    font-style: italic;
+  }
+  .section-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #6b5d52;
+    margin: 10px 0 0;
+    max-width: 580px;
+  }
+  .section-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+  }
+
+  .tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .tab {
+    padding: 12px 22px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab:hover { background: var(--paper-warm); }
+  .tab.active {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .tab-count {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 7px;
+    font-size: 10px;
+    background: rgba(26, 20, 16, 0.12);
+    color: var(--terracotta-deep);
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .tab.active .tab-count {
+    background: rgba(244, 237, 224, 0.2);
+    color: var(--ochre);
+  }
+
+  /* ===== PRODUCT GRID ===== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--terracotta);
+  }
+  .card-img {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    border-bottom: 2px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+  }
+  .card-img::before {
+    display: none;
+  }
+  /* Real product photos */
+  .product-photo {
+    max-width: 80%;
+    max-height: 85%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+    transition: transform 0.25s ease;
+    background: #fff;
+  }
+  .card:hover .product-photo,
+  /* Emoji fallback (when image fails or none set) */
+  .img-fallback {
+    font-size: 60px;
+    line-height: 1;
+    z-index: 1;
+  }
+  .badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4px 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .badge.bestseller { background: var(--terracotta); }
+  .badge.new { background: var(--forest); }
+  .card-body {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .card-unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: #6b5d52;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .card-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .card-savings {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .card-retail {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #8a7d70;
+    text-decoration: line-through;
+    text-decoration-color: var(--terracotta);
+    letter-spacing: 0.04em;
+  }
+  .card-save-tag {
+    background: var(--forest);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    line-height: 1;
+  }
+  .card-price {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--terracotta-deep);
+  }
+  .card-price .was {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 400;
+    color: #8a7d70;
+    text-decoration: line-through;
+    text-decoration-color: var(--terracotta);
+    margin-right: 2px;
+  }
+  .card-price small {
+    display: none;
+  }
+  .add-btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 8px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .add-btn:hover { background: var(--terracotta); }
+  .add-btn.added {
+    background: var(--forest);
+  }
+
+  /* Catalog grid responsive — matches hot-buys section */
+  @media (max-width: 1100px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 900px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+  /* Show more button below grid */
+  .show-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .show-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--terracotta);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .show-more-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--terracotta);
+    background: var(--paper-warm);
+  }
+  .show-more-btn:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 var(--terracotta);
+  }
+  .more-count {
+    font-size: 11px;
+    opacity: 0.55;
+    letter-spacing: 0.08em;
+    padding-left: 12px;
+    border-left: 1.5px solid rgba(26, 20, 16, 0.2);
+  }
+
+  /* ===== HOW IT WORKS ===== */
+  .how {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 100px 32px;
+    position: relative;
+  }
+  .how-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .how h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 60px;
+    line-height: 1;
+  }
+  .how h2 em {
+    color: var(--ochre);
+    font-style: italic;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+  }
+  .step {
+    position: relative;
+  }
+  .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--terracotta);
+    display: block;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .step h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .step p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(244, 237, 224, 0.75);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--paper-warm);
+    padding: 60px 32px 30px;
+    border-top: 2px solid var(--ink);
+  }
+  .footer-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-grid h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    margin-bottom: 16px;
+  }
+  .footer-grid p, .footer-grid a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+  .footer-grid a:hover { color: var(--terracotta); }
+  .footer-tagline {
+    font-family: 'Fraunces', serif;
+    font-size: 28px !important;
+    font-weight: 600;
+    line-height: 1.2 !important;
+    margin-bottom: 20px;
+    max-width: 380px;
+  }
+  .momo-badges {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .momo-badge {
+    padding: 6px 10px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+  .copyright {
+    border-top: 1px solid rgba(26,20,16,0.2);
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b5d52;
+  }
+
+  /* ===== CART DRAWER ===== */
+  .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 20, 16, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 200;
+  }
+  .cart-overlay.open { opacity: 1; pointer-events: auto; }
+
+  .cart-drawer {
+    position: fixed;
+    top: 0; right: 0;
+    width: 100%;
+    max-width: 460px;
+    height: 100vh;
+    background: var(--paper);
+    border-left: 2px solid var(--ink);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-drawer.open { transform: translateX(0); }
+  .cart-header {
+    padding: 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cart-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .close-btn {
+    width: 36px; height: 36px;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .close-btn:hover { background: var(--ink); color: var(--paper); }
+
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 24px;
+  }
+  .cart-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b5d52;
+  }
+  .cart-empty .icon {
+    font-size: 56px;
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+  .cart-empty p {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(26,20,16,0.15);
+    align-items: flex-start;
+  }
+  .cart-item-img {
+    width: 56px; height: 56px;
+    background: var(--paper-warm);
+    border: 1.5px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .cart-item-img img { max-width: 90%; max-height: 90%; object-fit: contain; }
+  .cart-item-info { flex: 1; min-width: 0; }
+  .cart-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .cart-item-info h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+  .cart-item-info .unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #6b5d52;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .cart-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1.5px solid var(--ink);
+    background: var(--paper);
+  }
+  .qty-btn {
+    width: 32px; height: 32px;
+    min-height: 32px;        /* override the global 44px tap-target rule */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+  .qty-btn:hover { background: var(--paper-warm); }
+  .qty-btn:active { background: var(--ochre); }
+  .qty-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 28px;
+    text-align: center;
+    border-left: 1.5px solid var(--ink);
+    border-right: 1.5px solid var(--ink);
+    padding: 6px 4px;
+    line-height: 1;
+  }
+  .cart-item-price {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--terracotta-deep);
+    white-space: nowrap;
+  }
+  .remove-btn {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    min-height: 28px;        /* override global 44px rule */
+    border: 1.5px solid rgba(26,20,16,0.2);
+    background: var(--paper);
+    color: #6b5d52;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+  .remove-btn:hover {
+    color: #fff;
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+  }
+
+  .cart-footer {
+    padding: 24px;
+    border-top: 2px solid var(--ink);
+    background: var(--paper-warm);
+  }
+.totals {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .totals.grand {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(26,20,16,0.2);
+  }
+  .checkout-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--terracotta);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: all 0.2s;
+  }
+  .checkout-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .checkout-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: 4px 4px 0 var(--ink) !important;
+  }
+
+  /* ===== CHECKOUT MODAL ===== */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(26, 20, 16, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: auto; }
+  .modal {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--terracotta);
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform 0.3s;
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+  .modal-header {
+    padding: 24px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .modal-body { padding: 24px; }
+
+  .field {
+    margin-bottom: 18px;
+  }
+  .field label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: var(--terracotta-deep);
+    font-weight: 500;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    background: #fffdf6;
+    box-shadow: 3px 3px 0 var(--terracotta);
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .momo-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .momo-opt {
+    padding: 14px 8px;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+  }
+  .momo-opt:hover { background: var(--paper-warm); }
+  .momo-opt.selected {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .momo-opt .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .momo-opt .net {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* Delivery method picker */
+  .delivery-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .delivery-opt {
+    padding: 14px 16px;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+  }
+  .delivery-opt:hover {
+    background: var(--paper-warm);
+    transform: translateX(2px);
+  }
+  .delivery-opt.selected {
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 4px 4px 0 var(--terracotta);
+  }
+  .delivery-opt.selected .dopt-free { color: var(--ochre); }
+  .dopt-main { flex: 1; min-width: 0; }
+  .dopt-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .dopt-desc {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .dopt-price { text-align: right; flex-shrink: 0; }
+  .dopt-fee {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .dopt-free {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-top: 2px;
+  }
+
+  .order-summary {
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 16px;
+    margin-top: 8px;
+  }
+  .summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .summary-line.total {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1.5px solid var(--ink);
+    color: var(--terracotta-deep);
+  }
+
+  .pay-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px;
+    background: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .pay-btn:hover { background: var(--terracotta); }
+
+  /* WhatsApp note above the order button */
+  .wa-note {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: #e8f5ec;
+    border: 1.5px solid #25D366;
+    border-radius: 4px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #0d4d24;
+  }
+  .wa-note .wa-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  /* Branded WhatsApp button */
+  .pay-btn.wa-btn {
+    background: #25D366;
+    color: #fff;
+    border-color: #128C3F;
+    box-shadow: 4px 4px 0 var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 14px;
+    transition: all 0.2s;
+  }
+  .pay-btn.wa-btn:hover {
+    background: #128C3F;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .pay-btn.wa-btn .wa-logo {
+    font-size: 18px;
+  }
+
+  .success {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .success .check {
+    width: 70px; height: 70px;
+    background: var(--forest);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--paper);
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .success h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .success p {
+    color: #4a3f37;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .order-id {
+    font-family: 'DM Mono', monospace;
+    background: var(--paper-warm);
+    padding: 10px;
+    border: 1.5px solid var(--ink);
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+
+  /* WhatsApp final-send button on success screen */
+  .pay-btn.wa-final {
+    margin-top: 28px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-color: #128C3F;
+    box-shadow: 5px 5px 0 var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    font-size: 14px;
+    transition: all 0.2s;
+    animation: wa-pulse 1.6s ease-in-out infinite;
+  }
+  .pay-btn.wa-final:hover {
+    background: #128C3F;
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--ink);
+    animation: none;
+  }
+  .pay-btn.wa-final:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  @keyframes wa-pulse {
+    0%, 100% { box-shadow: 5px 5px 0 var(--ink); }
+    50% { box-shadow: 5px 5px 0 var(--ink), 0 0 0 8px rgba(37, 211, 102, 0.18); }
+  }
+
+  /* Trouble-opening fallback details */
+  .wa-fallback {
+    margin-top: 22px;
+    text-align: left;
+    border: 1.5px solid rgba(26, 20, 16, 0.15);
+    border-radius: 4px;
+    padding: 0;
+  }
+  .wa-fallback summary {
+    cursor: pointer;
+    padding: 12px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b5d52;
+    list-style: none;
+  }
+  .wa-fallback summary::-webkit-details-marker { display: none; }
+  .wa-fallback summary::before { content: '+ '; color: var(--terracotta); }
+  .wa-fallback[open] summary::before { content: '− '; }
+  .wa-fallback[open] summary { border-bottom: 1px solid rgba(26, 20, 16, 0.1); }
+  .wa-fallback p {
+    padding: 12px 14px 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .wa-fallback .pay-btn {
+    margin: 8px 14px;
+    width: calc(100% - 28px);
+    padding: 12px;
+    font-size: 11px;
+  }
+  .wa-fallback .copy-fallback { background: var(--ink); color: var(--paper); }
+  .wa-fallback .alt-link {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  /* Done button on success screen */
+  .pay-btn.done-btn {
+    margin-top: 14px;
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .pay-btn.done-btn:hover { background: var(--paper-warm); }
+
+  /* ===== RESPONSIVE ===== */
+  /* ===== MOBILE FRIENDLY ===== */
+
+  /* Prevent iOS zoom on input focus (anything <16px triggers zoom) */
+  input, textarea, select { font-size: 16px; }
+
+  /* All buttons get a minimum tap target on touch devices.
+     Excludes small in-cart controls that have their own sizing. */
+  button:not(.qty-btn):not(.remove-btn), .btn-primary, .btn-secondary, .add-btn,
+  .pay-btn, .checkout-btn, .tab, .momo-opt, .delivery-opt,
+.add-btn { min-width: 60px; }
+
+  /* Smooth scrolling and tap highlight tweaks */
+  html { -webkit-tap-highlight-color: rgba(196, 77, 46, 0.15); }
+  body { -webkit-text-size-adjust: 100%; }
+
+  /* iOS safe area support (iPhone home indicator) */
+  body { padding-bottom: env(safe-area-inset-bottom); }
+  .cart-footer { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+  .cart-drawer { padding-bottom: env(safe-area-inset-bottom); }
+  .modal { padding-bottom: env(safe-area-inset-bottom); }
+
+  /* ===== Mobile nav (hamburger + slide-down menu) ===== */
+  .menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--ink);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .menu-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--paper);
+    border-bottom: 2px solid var(--ink);
+    padding: 70px 24px 24px;
+    z-index: 99;
+    transform: translateY(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(26, 20, 16, 0.12);
+  }
+  .mobile-nav.open { transform: translateY(0); }
+  .mobile-nav a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(26,20,16,0.1);
+    text-decoration: none;
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav a:hover { color: var(--terracotta); }
+
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .menu-toggle { display: flex; }
+    .mobile-nav { display: block; }
+
+    .hero { padding: 40px 20px 60px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: clamp(40px, 11vw, 64px); }
+    .section-title { font-size: 38px; }
+    .how h2 { font-size: 42px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    header { padding: 12px 16px; }
+    .shop-section { padding: 60px 16px; }
+    .field-row { grid-template-columns: 1fr; }
+    .momo-options { grid-template-columns: 1fr; }
+/* Cart fills screen on small devices */
+    .cart-drawer { max-width: 100%; }
+    .cart-btn { padding: 8px 12px; font-size: 11px; }
+
+    /* Modal fills more of screen */
+    .modal-overlay { padding: 0; align-items: flex-end; }
+    .modal {
+      max-width: 100%;
+      max-height: 92vh;
+      border-bottom: none;
+      box-shadow: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    /* Hero buttons on mobile: shopping CTA full-width, icon buttons sit alongside */
+    .hero-actions { width: 100%; flex-wrap: wrap; }
+    .hero-actions .btn-primary {
+      flex: 1;
+      justify-content: center;
+      padding: 14px 16px;
+      font-size: 12px;
+    }
+    .hero-actions .btn-whatsapp,
+    .hero-actions .btn-call {
+      flex: 0 0 56px;
+    }
+
+    /* Featured cards on mobile: even tighter */
+    .hp-card { padding: 12px; }
+    .hp-img { height: 100px; margin: -12px -12px 10px; }
+    .hp-icon { font-size: 48px; }
+    .hp-meta h3 { font-size: 14px; }
+    .hp-unit { font-size: 9px; }
+    .hp-price { font-size: 16px; }
+
+    /* Discount cards: shrink Add button */
+}
+
+  @media (max-width: 500px) {
+.footer-grid { grid-template-columns: 1fr; }
+    .logo small { display: none; }
+
+    /* Header more compact */
+    .logo { font-size: 18px; gap: 8px; }
+    .logo-mark { width: 32px; height: 32px; }
+
+    /* Hero product cards tighter on mobile */
+    .hero-art { gap: 10px; }
+
+    /* Tabs scroll horizontally if too many */
+    .tabs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab { white-space: nowrap; flex-shrink: 0; }
+
+    /* Smaller section padding */
+    .shop-section { padding: 40px 12px; }
+    .section-title { font-size: 32px; }
+    .how { padding: 60px 16px; }
+    .how h2 { font-size: 32px; }
+    .step-num { font-size: 60px; }
+
+    /* Discount section */
+/* Product cards bigger touch areas */
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .card-img { height: 110px; font-size: 48px; }
+    .card-body { padding: 12px; }
+    .card-name { font-size: 14px; }
+    .card-unit { font-size: 9px; margin-bottom: 8px; }
+    .card-price { font-size: 16px; }
+    .card-price small { font-size: 9px; }
+    .card-bottom {
+      gap: 8px;
+    }
+    .add-btn {
+      padding: 8px 10px;
+      font-size: 10px;
+    }
+
+    /* Ribbon font */
+    .ribbon { font-size: 10px; }
+
+    /* Footer */
+    footer { padding: 40px 20px 24px; }
+    .footer-tagline { font-size: 22px !important; }
+
+    /* Admin dashboard mobile */
+    .admin-panel { padding: 16px; }
+    .admin-title { font-size: 32px; }
+    .admin-actions button { padding: 8px 12px; font-size: 10px; }
+    .stat-value { font-size: 26px; }
+    .order-card { padding: 14px; }
+  }
+
+  @media (max-width: 380px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== Floating WhatsApp button (mobile only) ===== */
+  .floating-wa {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    border: 3px solid var(--ink);
+    box-shadow: 0 4px 16px rgba(26, 20, 16, 0.25);
+    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    transition: transform 0.2s;
+  }
+  .floating-wa:hover { transform: scale(1.08); }
+  .floating-wa:active { transform: scale(0.95); }
+
+  @media (max-width: 900px) {
+    .floating-wa { display: flex; }
+  }
+
+
+  /* ===== ADMIN DASHBOARD ===== */
+  .admin-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--paper);
+    z-index: 500;
+    display: none;
+    overflow-y: auto;
+  }
+  .admin-overlay.open { display: block; }
+  .admin-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+    min-height: 100vh;
+  }
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .admin-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta-deep);
+    margin-bottom: 6px;
+  }
+  .admin-title {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .admin-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .admin-btn-ghost {
+    padding: 10px 16px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .admin-btn-ghost:hover { background: var(--ink); color: var(--paper); }
+  .admin-btn-ghost.danger:hover { background: #b33024; border-color: #b33024; color: #fff; }
+
+  /* Login */
+  .admin-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+  }
+  .admin-login-inner {
+    text-align: center;
+    max-width: 360px;
+    padding: 40px;
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--terracotta);
+  }
+  .admin-login-inner h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .admin-login-inner input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .admin-login-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .admin-login-btn:hover { background: var(--terracotta); }
+  .admin-login-error {
+    color: var(--terracotta-deep);
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 18px;
+  }
+
+  /* Stats */
+  .admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 20px;
+  }
+  .stat-value {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--terracotta-deep);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b5d52;
+  }
+
+  /* Filters */
+  .admin-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .admin-filters input,
+  .admin-filters select {
+    padding: 12px 14px;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .admin-filters input { flex: 1; min-width: 200px; }
+  .admin-filters input:focus,
+  .admin-filters select:focus {
+    outline: none;
+    box-shadow: 3px 3px 0 var(--terracotta);
+  }
+
+  /* Order list */
+  .admin-orders-list { display: flex; flex-direction: column; gap: 14px; }
+  .admin-empty {
+    padding: 60px 20px;
+    text-align: center;
+    color: #6b5d52;
+    background: var(--paper-warm);
+    border: 2px dashed var(--ink);
+  }
+  .admin-empty .icon { font-size: 48px; margin-bottom: 12px; opacity: 0.5; }
+
+  .order-card {
+    background: var(--paper-warm);
+    border: 2px solid var(--ink);
+    padding: 20px;
+    transition: all 0.2s;
+  }
+  .order-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .order-id-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .order-id-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 5px 10px;
+    letter-spacing: 0.1em;
+  }
+  .order-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #6b5d52;
+    letter-spacing: 0.05em;
+  }
+  .status-pill {
+    padding: 4px 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1.5px solid;
+    cursor: pointer;
+  }
+  .status-pill.pending { background: #fff4d4; border-color: var(--ochre); color: #6b4d10; }
+  .status-pill.confirmed { background: #e0e7f5; border-color: #3a7dc4; color: #1f4570; }
+  .status-pill.delivered { background: #d8ecdf; border-color: var(--forest); color: #1a3d28; }
+  .status-pill.cancelled { background: #f5d8d4; border-color: var(--terracotta); color: #6b1a0e; }
+
+  .order-customer {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .order-customer .field-block {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .order-customer .field-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b5d52;
+    margin-bottom: 2px;
+  }
+  .order-customer .field-value {
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .order-customer .field-value a {
+    color: var(--terracotta-deep);
+    text-decoration: none;
+  }
+  .order-customer .field-value a:hover { text-decoration: underline; }
+
+  .order-items-table {
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+  .order-items-table .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(26,20,16,0.1);
+  }
+  .order-items-table .row:last-child { border-bottom: none; }
+  .order-items-table .row.total {
+    background: var(--paper-warm);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--terracotta-deep);
+  }
+  .order-items-table .row.discount { color: var(--forest); font-size: 12px; }
+
+  .order-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .order-actions button,
+  .order-actions a {
+    padding: 8px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+  }
+  .order-actions button:hover,
+  .order-actions a:hover { background: var(--ink); color: var(--paper); }
+  .order-actions a.wa { border-color: #25D366; color: #128C3F; }
+  .order-actions a.wa:hover { background: #25D366; color: #fff; }
+
+  .order-notes {
+    background: #fff4d4;
+    border-left: 3px solid var(--ochre);
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  @media (max-width: 700px) {
+    .admin-panel { padding: 20px; }
+    .admin-title { font-size: 36px; }
+    .order-customer { flex-direction: column; gap: 10px; }
+    .stat-value { font-size: 28px; }
+  }
+</style>
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
+<body data-new-gr-c-s-check-loaded="14.1286.0" data-gr-ext-installed="">
+
+<!-- Top ribbon -->
+<div class="ribbon">
+  <div class="ribbon-track">
+    <span>Free delivery on orders over GH₵ 2,000</span>
+    <span>Wholesale prices on every item</span>
+    <span>Pay easily with MoMo</span>
+    <span>Delivering across Accra, Aburi &amp; Koforidua</span>
+    <span>Free delivery on orders over GH₵ 2,000</span>
+    <span>Wholesale prices on every item</span>
+    <span>Pay easily with MoMo</span>
+    <span>Delivering across Accra, Aburi &amp; Koforidua</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <a href="#" class="logo" aria-label="Marketprice Delivery — home">
+    <span class="logo-mark"></span>
+    <span>
+      Marketprice Delivery
+      <small>Wholesale · Accra</small>
+    </span>
+  </a>
+  <nav>
+    <a href="#hotbuys">🔥 Hot</a>
+    <a href="#shop">Shop</a>
+    <a href="#how">How it works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="cart-btn" aria-label="Open shopping cart" onclick="openCart()">
+    Cart <span class="cart-count" id="cartCount">0</span>
+  </button>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile slide-down nav -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#hotbuys" onclick="closeMobileMenu()">🔥 Hot buys</a>
+  <a href="#shop" onclick="closeMobileMenu()">Shop</a>
+  <a href="#how" onclick="closeMobileMenu()">How it works</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="https://wa.me/233249042264" target="_blank" rel="noopener">📱 WhatsApp us</a>
+  <a href="tel:+233249042264">📞 Call to order</a>
+</nav>
+
+<!-- Floating WhatsApp button (mobile only) -->
+<a href="https://wa.me/233249042264" target="_blank" rel="noopener" class="floating-wa" aria-label="Chat on WhatsApp">📱</a>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <h1>Wholesale prices,<br><span class="accent">market-fresh</span><br>delivered.</h1>
+      <p>From Milo and Ideal Milk to soaps, biscuits, baby food, and household essentials — over 400 trusted wholesale items delivered to your door. Pay with MoMo when your goods arrive.</p>
+      <div class="free-delivery-badge">
+        <span class="fdb-icon">🚚</span>
+        <span class="fdb-text"><strong>FREE delivery</strong> on orders over GH₵ 2,000</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#shop" class="btn-primary">Start shopping →</a>
+        <a href="https://wa.me/233249042264" target="_blank" rel="noopener" class="btn-whatsapp" aria-label="WhatsApp us">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/></svg>
+        </a>
+        <a href="tel:+233249042264" class="btn-call" aria-label="Call us">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.05 15.05 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+        </a>
+      </div>
+    </div>
+
+<div class="hero-art">
+  <a href="#shop" class="hp-card hp-cat-bev">
+    <div class="hp-tag">Bestseller</div>
+    <div class="hp-img"><span class="hp-icon">☕</span></div>
+    <div class="hp-meta">
+      <h3>Milo 800g</h3>
+      <p class="hp-unit">12pcs carton</p>
+      <div class="hp-savings">
+        <span class="hp-retail">GH₵ 891</span>
+        <span class="hp-save-tag">Save 116</span>
+      </div>
+    </div>
+    <div class="hp-foot">
+      <span class="hp-price">GH₵ 775</span>
+      <span class="hp-arrow">→</span>
+    </div>
+  </a>
+  <a href="#shop" class="hp-card hp-cat-food">
+    <div class="hp-tag">Popular</div>
+    <div class="hp-img"><span class="hp-icon">🥛</span></div>
+    <div class="hp-meta">
+      <h3>Ideal Milk 370g</h3>
+      <p class="hp-unit">24pcs carton</p>
+      <div class="hp-savings">
+        <span class="hp-retail">GH₵ 621</span>
+        <span class="hp-save-tag">Save 81</span>
+      </div>
+    </div>
+    <div class="hp-foot">
+      <span class="hp-price">GH₵ 540</span>
+      <span class="hp-arrow">→</span>
+    </div>
+  </a>
+</div>
+  </div>
+</section>
+
+<div class="kente-strip"></div>
+
+<!-- Hot Buys — horizontal scrolling strip -->
+<section class="hot-section" id="hotbuys">
+  <div class="hot-inner">
+    <div class="hot-header">
+      <div>
+        <div class="hot-eyebrow">🔥 Hot this week</div>
+        <h2 class="hot-title">Hot <em>buys.</em></h2>
+        <p class="hot-sub">Top-selling cartons our customers reorder most. Same wholesale prices, ready to ship.</p>
+      </div>
+    </div>
+    <div class="hot-strip" id="hotStrip"></div>
+  </div>
+</section>
+
+<!-- Shop -->
+<section class="shop-section" id="shop">
+  <div class="section-header">
+    <div class="section-eyebrow">🛒 Full catalogue</div>
+    <h2 class="section-title">Today's <em>market.</em></h2>
+    <p class="section-sub">Over 400 wholesale items across foodstuff, beverages, household, baby care, and snacks. Same prices everyone pays — no haggling, no surprises.</p>
+  </div>
+
+  <div class="tabs" id="tabs"><button class="tab active" data-cat="all">All goods <span class="tab-count">64</span></button><button class="tab " data-cat="foodstuff">Foodstuff <span class="tab-count">64</span></button></div>
+
+  <div class="grid" id="grid">
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://gh.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/18/0300141/1.jpg?7025" alt="Carnation Milk 160g" loading="lazy" onerror="swapToFallback(this, 500)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Carnation Milk 160g</h3>
+          <div class="card-unit">24pcs carton</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 220<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(500, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/1/4/147050a.jpg" alt="Carnation Milk Sachet" loading="lazy" onerror="swapToFallback(this, 501)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Carnation Milk Sachet</h3>
+          <div class="card-unit">18 strips</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 470<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(501, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/i/d/ideal_original_370g.jpg" alt="Ideal Milk 370g" loading="lazy" onerror="swapToFallback(this, 502)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Ideal Milk 370g</h3>
+          <div class="card-unit">24pcs carton</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 480<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(502, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <span class="img-fallback">🥛</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Ideal Milk 160g</h3>
+          <div class="card-unit">24pcs carton</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 240<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(503, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/i/d/ideal_mini_29g.jpg" alt="Ideal Milk Sachet" loading="lazy" onerror="swapToFallback(this, 504)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Ideal Milk Sachet</h3>
+          <div class="card-unit">18 strips</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 505<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(504, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          <span class="badge bestseller">bestseller</span>
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/n/i/nido_update_1.png" alt="Nido Full Cream 350g" loading="lazy" onerror="swapToFallback(this, 505)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Nido Full Cream 350g</h3>
+          <div class="card-unit">12pcs carton</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 553<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(505, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/n/i/nido_essentia_obaatanpa_23g_promo_laminate_a1n1_engh.jpg" alt="Nido Sachet 23g" loading="lazy" onerror="swapToFallback(this, 506)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Nido Sachet 23g</h3>
+          <div class="card-unit">12 strips</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 405<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(506, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/n/u/nutripak_14g.jpg" alt="Nido Sachet 14g" loading="lazy" onerror="swapToFallback(this, 507)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Nido Sachet 14g</h3>
+          <div class="card-unit">26 strips</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 505<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(507, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/n/i/nido_1_400g.jpg" alt="Nido 1+ (Toddler)" loading="lazy" onerror="swapToFallback(this, 508)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Nido 1+ (Toddler)</h3>
+          <div class="card-unit">12pcs carton</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 1180<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(508, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img">
+          
+          <img class="product-photo" src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/n/a/nan_3_optipro_400g.jpg" alt="Nan 1 &amp; 2 Infant Formula" loading="lazy" onerror="swapToFallback(this, 509)">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Nan 1 &amp; 2 Infant Formula</h3>
+          <div class="card-unit">12pcs carton</div>
+          <div class="card-bottom">
+            <div class="card-price">
+              GH₵ 1215<small>per unit</small>
+            </div>
+            <button class="add-btn " onclick="addToCart(509, this)">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="show-more-wrap">
+    <button class="show-more-btn" id="showMoreBtn" onclick="showMore()" style="display: inline-flex;">Show 10 more <span class="more-count">10 of 64</span></button>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <h2>How it <em>works.</em></h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Browse &amp; order</h3>
+        <p>Pick what you need from our shop. Order online or call us.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>We confirm</h3>
+        <p>Within minutes, we'll call to confirm your order, address, and delivery time.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>We deliver</h3>
+        <p>Your goods arrive same-day or next-day across Greater Accra. Delivery from GH₵ 50, free over GH₵ 2,000.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <h3>Pay with MoMo</h3>
+        <p>Pay securely on delivery via MTN, Vodafone Cash, or AirtelTigo Money.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <a href="#" class="logo" style="margin-bottom: 16px;">
+        <span class="logo-mark"></span>
+        <span>Marketprice Delivery</span>
+      </a>
+      <p class="footer-tagline">Bringing the market to your doorstep — at wholesale prices.</p>
+      <p>Serving all of Greater Accra plus Aburi &amp; Koforidua: East Legon, Osu, Spintex, Tema, Madina, Adenta, Achimota, Dansoman, Aburi, Koforidua &amp; more.</p>
+    </div>
+    <div>
+      <h4>Order</h4>
+      <a href="tel:+233249042264">+233 24 904 2264</a>
+      <a href="https://wa.me/233249042264">WhatsApp us</a>
+      <a href="mailto:orders@marketpricedelivery.com">orders@marketpricedelivery.com</a>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#shop">Foodstuff</a>
+      <a href="#shop">Beverages</a>
+      <a href="#shop">Household</a>
+    </div>
+    <div>
+      <h4>Pay with</h4>
+      <p style="margin-bottom: 6px;">Mobile Money accepted</p>
+      <div class="momo-badges">
+        <span class="momo-badge">MTN</span>
+        <span class="momo-badge">VOD</span>
+        <span class="momo-badge">AT</span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 Marketprice Delivery · Accra, Ghana · <a href="#admin-orders" style="color: inherit; opacity: 0.5; text-decoration: none;">·</a>
+  </div>
+</footer>
+
+<!-- ===== ADMIN ORDERS DASHBOARD (hidden until #admin-orders + password) ===== -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-panel">
+    <div class="admin-header">
+      <div>
+        <div class="admin-eyebrow">Marketprice Delivery · Admin</div>
+        <h2 class="admin-title">Orders</h2>
+      </div>
+      <div class="admin-actions">
+        <button class="admin-btn-ghost" onclick="exportOrdersCSV()">⬇ Export CSV</button>
+        <button class="admin-btn-ghost danger" onclick="clearAllOrders()">Clear all</button>
+        <button class="admin-btn-ghost" onclick="closeAdmin()">✕ Close</button>
+      </div>
+    </div>
+
+    <!-- Login -->
+    <div class="admin-login" id="adminLogin">
+      <div class="admin-login-inner">
+        <div style="font-size: 48px; margin-bottom: 12px;">🔒</div>
+        <h3>Enter admin password</h3>
+        <input type="password" id="adminPwd" placeholder="Password" autocomplete="off">
+        <button onclick="checkAdminPwd()" class="admin-login-btn">Unlock</button>
+        <p class="admin-login-error" id="adminLoginError"></p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="admin-content" id="adminContent" style="display:none;">
+      <div class="admin-stats">
+        <div class="stat-card">
+          <div class="stat-value" id="statTotal">0</div>
+          <div class="stat-label">Total orders</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statRevenue">GH₵ 0</div>
+          <div class="stat-label">Total revenue</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statToday">0</div>
+          <div class="stat-label">Today</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statAvg">GH₵ 0</div>
+          <div class="stat-label">Avg order</div>
+        </div>
+      </div>
+
+      <div class="admin-filters">
+        <input type="text" id="adminSearch" placeholder="Search by name, phone, order ID..." oninput="renderAdminOrders()">
+        <select id="adminStatus" onchange="renderAdminOrders()">
+          <option value="all">All statuses</option>
+          <option value="pending">Pending</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="delivered">Delivered</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+
+      <div class="admin-orders-list" id="adminOrdersList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart drawer -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>Your basket</h2>
+    <button class="close-btn" aria-label="Close cart" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+        <div class="cart-empty">
+          <div class="icon">🧺</div>
+          <p>Your basket is empty.<br>Add some goods to get started.</p>
+        </div></div>
+  <div class="cart-footer">
+    <div class="totals"><span>Subtotal</span><span id="subtotal">GH₵ 0.00</span></div>
+    <div class="totals"><span>Delivery</span><span id="delivery">Choose at checkout</span></div>
+    <div class="totals grand"><span>Total</span><span id="total">GH₵ 0.00</span></div>
+    <button class="checkout-btn" id="checkoutBtn" onclick="openCheckout()" disabled="">Proceed to checkout</button>
+  </div>
+</aside>
+
+<!-- Checkout modal -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Checkout</h2>
+      <button class="close-btn" aria-label="Close checkout" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <div class="field">
+        <label>Full name</label>
+        <input type="text" id="fName" placeholder="Akua Mensah" required="">
+      <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; display: initial !important; float: left !important;"></div></div>
+      <div class="field">
+        <label>Phone</label>
+        <input type="tel" id="fPhone" placeholder="024 000 0000" required="">
+      </div>
+      <div class="field">
+        <label>Delivery address</label>
+        <textarea id="fAddress" rows="3" placeholder="House number, street, area, town/city, landmark — e.g. House 24, Lagos Avenue, East Legon, near A&amp;C Mall"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Notes for us <span style="opacity: 0.5; text-transform: none; letter-spacing: 0;">(optional)</span></label>
+        <textarea id="fNotes" rows="2" placeholder="Anything we should know? — e.g. call when arriving, leave at gate, prefer afternoon delivery"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Delivery method</label>
+        <div class="delivery-options" id="deliveryOpts">
+          <div class="delivery-opt selected" data-method="standard" data-fee="50" data-free="2000">
+            <div class="dopt-main">
+              <div class="dopt-name">🛵 Accra Standard</div>
+              <div class="dopt-desc">Same-day or next-day · within Accra</div>
+            </div>
+            <div class="dopt-price">
+              <div class="dopt-fee">GH₵ 50</div>
+              <div class="dopt-free">FREE over GH₵ 2,000</div>
+            </div>
+          </div>
+          <div class="delivery-opt" data-method="express" data-fee="60" data-free="0">
+            <div class="dopt-main">
+              <div class="dopt-name">⚡ Accra Express</div>
+              <div class="dopt-desc">Within 2 hours · within Accra</div>
+            </div>
+            <div class="dopt-price">
+              <div class="dopt-fee">GH₵ 60</div>
+              <div class="dopt-free">Anywhere in Accra</div>
+            </div>
+          </div>
+          <div class="delivery-opt" data-method="aburi" data-fee="80" data-free="2000">
+            <div class="dopt-main">
+              <div class="dopt-name">🌄 Aburi &amp; nearby</div>
+              <div class="dopt-desc">Next-day delivery to Aburi area</div>
+            </div>
+            <div class="dopt-price">
+              <div class="dopt-fee">GH₵ 80</div>
+              <div class="dopt-free">FREE over GH₵ 2,000</div>
+            </div>
+          </div>
+          <div class="delivery-opt" data-method="koforidua" data-fee="120" data-free="2000">
+            <div class="dopt-main">
+              <div class="dopt-name">🚚 Koforidua</div>
+              <div class="dopt-desc">1–2 day delivery to Koforidua</div>
+            </div>
+            <div class="dopt-price">
+              <div class="dopt-fee">GH₵ 120</div>
+              <div class="dopt-free">FREE over GH₵ 2,000</div>
+            </div>
+          </div>
+          <div class="delivery-opt" data-method="pickup" data-fee="0" data-free="0">
+            <div class="dopt-main">
+              <div class="dopt-name">🏪 Pickup at our shop</div>
+              <div class="dopt-desc">Collect yourself · no delivery fee</div>
+            </div>
+            <div class="dopt-price">
+              <div class="dopt-fee">FREE</div>
+              <div class="dopt-free">Pay at pickup</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Pay with mobile money</label>
+        <div class="momo-options" id="momoOpts">
+          <div class="momo-opt selected" data-net="MTN"><div class="name">MTN</div><div class="net">MoMo</div></div>
+          <div class="momo-opt" data-net="VOD"><div class="name">Vodafone</div><div class="net">Cash</div></div>
+          <div class="momo-opt" data-net="AT"><div class="name">AirtelTigo</div><div class="net">Money</div></div>
+        </div>
+      </div>
+      <div class="field">
+        <label>MoMo number</label>
+        <input type="tel" id="fMomo" placeholder="024 000 0000">
+      </div>
+      <div class="order-summary" id="orderSummary"></div>
+
+      <div class="wa-note">
+        <span class="wa-icon">📱</span>
+        <span>You'll send your order to us via WhatsApp on the next screen — just hit Send when it opens.</span>
+      </div>
+
+      <button class="pay-btn wa-btn" onclick="placeOrder()">
+        <span class="wa-logo">📱</span>
+        Continue
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// === PRODUCT DATA ===
+  // price = current price; was = original (shows strikethrough if present)
+  // Real Ghanaian brands and common wholesale items
+  const PRODUCTS = [
+    // ===== FOODSTUFF (104 items) =====
+    { id: 1001, name: 'Carnation 160g', cat: 'foodstuff', unit: '24pcs carton', price: 220, icon: '🥛' },
+    { id: 1002, name: 'Ideal 370g', cat: 'foodstuff', unit: '24pcs carton', price: 540, icon: '🥛' },
+    { id: 1003, name: 'Ideal 160g', cat: 'foodstuff', unit: '24pcs carton', price: 240, icon: '🥛' },
+    { id: 1004, name: 'Nido 350g', cat: 'foodstuff', unit: '12pcs carton', price: 553, icon: '🥛' },
+    { id: 1005, name: 'Nido 23g', cat: 'foodstuff', unit: '12pcs carton', price: 405, icon: '🥛' },
+    { id: 1006, name: 'Nido 14g', cat: 'foodstuff', unit: '26pcs carton', price: 505, icon: '🥛' },
+    { id: 1018, name: 'Golden Morn', cat: 'foodstuff', unit: '10 strips', price: 225, icon: '🥣' },
+    { id: 1029, name: 'Maggie Arome 250ml', cat: 'foodstuff', unit: '24pcs carton', price: 540, icon: '🧂' },
+    { id: 1031, name: 'Cowbell Strawberry', cat: 'foodstuff', unit: '12 strips', price: 420, icon: '🥛' },
+    { id: 1032, name: 'Cowbell vitarich 26g', cat: 'foodstuff', unit: '12 strips', price: 340, icon: '🥛' },
+    { id: 1033, name: 'Cowbell vitarich 14g', cat: 'foodstuff', unit: '21 strips', price: 430, icon: '🥛' },
+    { id: 1034, name: 'Cowbell vitarich 320g', cat: 'foodstuff', unit: '12pcs carton', price: 370, icon: '🥛' },
+    { id: 1035, name: 'Cowbell Tin', cat: 'foodstuff', unit: '12pcs carton', price: 535, icon: '🥛' },
+    { id: 1036, name: 'Miksi Choco - 350', cat: 'foodstuff', unit: '12 strips', price: 350, icon: '🥫' },
+    { id: 1037, name: 'Yumvita Rice', cat: 'foodstuff', unit: '8 strips', price: 360, icon: '🌾' },
+    { id: 1038, name: 'Yumvita wheat', cat: 'foodstuff', unit: '8 strips', price: 360, icon: '🌾' },
+    { id: 1039, name: 'Yumvita Maize', cat: 'foodstuff', unit: '8 strips', price: 360, icon: '🌾' },
+    { id: 1040, name: 'Kremela 10g', cat: 'foodstuff', unit: '30 strips', price: 9, icon: '🥛' },
+    { id: 1041, name: 'Onga stew 10g', cat: 'foodstuff', unit: '20 strips', price: 190, icon: '🧂' },
+    { id: 1042, name: 'Onga stew 50g', cat: 'foodstuff', unit: '8 strips', price: 255, icon: '🧂' },
+    { id: 1043, name: 'Onga 3mix 10g', cat: 'foodstuff', unit: '20 strips', price: 190, icon: '🧂' },
+    { id: 1044, name: 'Onga 3mix 50g', cat: 'foodstuff', unit: '8 strips', price: 255, icon: '🧂' },
+    { id: 1045, name: 'Onga Classic 10g', cat: 'foodstuff', unit: '20 strips', price: 190, icon: '🧂' },
+    { id: 1046, name: 'Onga Classic 50g', cat: 'foodstuff', unit: '8 strips', price: 255, icon: '🧂' },
+    { id: 1047, name: 'Onga Shrimp Tab', cat: 'foodstuff', unit: '24pcs carton', price: 730, icon: '🧂' },
+    { id: 1048, name: 'Popular Milk', cat: 'foodstuff', unit: '24pcs carton', price: 145, icon: '🥛' },
+    { id: 1049, name: 'Peak Green s/s', cat: 'foodstuff', unit: '48pcs carton', price: 380, icon: '🥛' },
+    { id: 1050, name: 'Peak Green B/s', cat: 'foodstuff', unit: '24pcs carton', price: 440, icon: '🥛' },
+    { id: 1051, name: 'Dano Milk s/s', cat: 'foodstuff', unit: '24pks carton', price: 185, icon: '🥛' },
+    { id: 1052, name: 'Dano Mlik B/s', cat: 'foodstuff', unit: '24pks carton', price: 218, icon: '🥫' },
+    { id: 1053, name: 'Peak 1lt Full Cream', cat: 'foodstuff', unit: '12pcs carton', price: 390, icon: '🥛' },
+    { id: 1054, name: 'Peak1lt Low fat', cat: 'foodstuff', unit: '12pcs carton', price: 355, icon: '🥛' },
+    { id: 1055, name: 'Dano 1lt Full Cream', cat: 'foodstuff', unit: 'Wholesale unit', price: 410, icon: '🥗' },
+    { id: 1056, name: 'Unity Milk B/s', cat: 'foodstuff', unit: '24pcs carton', price: 410, icon: '🥛' },
+    { id: 1057, name: 'Unity Condense', cat: 'foodstuff', unit: '24pcs carton', price: 605, icon: '🥫' },
+    { id: 1058, name: 'Loya Milk pillow', cat: 'foodstuff', unit: '12pcs carton', price: 510, icon: '🥛' },
+    { id: 1059, name: 'Loya Milk 20g', cat: 'foodstuff', unit: '20 strips', price: 385, icon: '🥛' },
+    { id: 1063, name: 'Abena Non-Diary 250g', cat: 'foodstuff', unit: '50pcs carton', price: 480, icon: '🥫' },
+    { id: 1064, name: 'Kivo Good Time 250g', cat: 'foodstuff', unit: '26pcs carton', price: 350, icon: '🥫' },
+    { id: 1065, name: 'Kivo Good Time 200g', cat: 'foodstuff', unit: '26pcs carton', price: 230, icon: '🥫' },
+    { id: 1066, name: 'Kivo Good Time 20g', cat: 'foodstuff', unit: '20 strips', price: 245, icon: '🥫' },
+    { id: 1067, name: 'Kivo Good Time 12g', cat: 'foodstuff', unit: '31strips ×11', price: 238, icon: '🥫' },
+    { id: 1068, name: 'Kivo Shito 20g Strips', cat: 'foodstuff', unit: '6 strips', price: 150, icon: '🌶️' },
+    { id: 1069, name: 'Kivo Shito 500g', cat: 'foodstuff', unit: '6pcs carton', price: 310, icon: '🌶️' },
+    { id: 1070, name: 'Kivo shito 250g', cat: 'foodstuff', unit: '24pcs carton', price: 610, icon: '🌶️' },
+    { id: 1071, name: 'Kivo Gari B/s', cat: 'foodstuff', unit: '4 strips', price: 150, icon: '🌾' },
+    { id: 1072, name: 'Kivo Gari S/S', cat: 'foodstuff', unit: '8 strips', price: 75, icon: '🌾' },
+    { id: 1073, name: 'Haano 1kg', cat: 'foodstuff', unit: '12pcs carton', price: 520, icon: '🥛' },
+    { id: 1074, name: 'Haano Non-Diary', cat: 'foodstuff', unit: '50pcs carton', price: 520, icon: '🥛' },
+    { id: 1075, name: 'Enapa non-dairy', cat: 'foodstuff', unit: '20 strips', price: 285, icon: '🥫' },
+    { id: 1076, name: 'Enapa non-dairy 225g', cat: 'foodstuff', unit: '50pcs carton', price: 460, icon: '🥫' },
+    { id: 1077, name: 'Thisway', cat: 'foodstuff', unit: '4pks carton', price: 330, icon: '🥫' },
+    { id: 1078, name: 'Top Saho Condense sachet', cat: 'foodstuff', unit: '28pcs carton', price: 250, icon: '🥫' },
+    { id: 1089, name: 'Blueband 900g', cat: 'foodstuff', unit: '12pcs carton', price: 380, icon: '🧈' },
+    { id: 1090, name: 'Blueband 450g', cat: 'foodstuff', unit: '24pcs carton', price: 450, icon: '🧈' },
+    { id: 1091, name: 'Blueband 250g', cat: 'foodstuff', unit: '24pcs carton', price: 300, icon: '🧈' },
+    { id: 1092, name: 'Blueband 75g', cat: 'foodstuff', unit: '48pcs carton', price: 270, icon: '🧈' },
+    { id: 1093, name: 'Blueband 12g sachet', cat: 'foodstuff', unit: '25pcs carton', price: 174, icon: '🧈' },
+    { id: 1094, name: 'Haano Margarine', cat: 'foodstuff', unit: '10 strips × 60 pcs', price: 450, icon: '🥛' },
+    { id: 1096, name: 'Brown Gold', cat: 'foodstuff', unit: '20pcs carton', price: 1100, icon: '🥫' },
+    { id: 1097, name: 'Peak Powder Tin', cat: 'foodstuff', unit: '12pcs carton', price: 700, icon: '🥛' },
+    { id: 1116, name: 'Victoria B/s', cat: 'foodstuff', unit: '12pks carton', price: 345, icon: '🥫' },
+    { id: 1117, name: 'Victoria M/s', cat: 'foodstuff', unit: '24pks carton', price: 365, icon: '🥫' },
+    { id: 1118, name: 'Victoria Flavours', cat: 'foodstuff', unit: '24pks carton', price: 295, icon: '🥫' },
+    { id: 1120, name: 'Brown Sugar S/s', cat: 'foodstuff', unit: '12pcs carton', price: 90, icon: '🧂' },
+    { id: 1121, name: 'Brown Sugar M/s', cat: 'foodstuff', unit: '6pcs carton', price: 90, icon: '🧂' },
+    { id: 1122, name: 'Brown Sugar B/s', cat: 'foodstuff', unit: '6pcs carton', price: 180, icon: '🧂' },
+    { id: 1123, name: 'Oscar Spaghetti', cat: 'foodstuff', unit: '20pcs carton', price: 120, icon: '🍝' },
+    { id: 1124, name: 'Atalanta Spaghetti', cat: 'foodstuff', unit: '20pcs carton', price: 120, icon: '🍝' },
+    { id: 1125, name: 'Liberator Sardine', cat: 'foodstuff', unit: '50pcs carton', price: 560, icon: '🐟' },
+    { id: 1126, name: 'Titus Sardine', cat: 'foodstuff', unit: '50pcs carton', price: 570, icon: '🐟' },
+    { id: 1127, name: 'Bonvie Sardine', cat: 'foodstuff', unit: '50pcs carton', price: 330, icon: '🐟' },
+    { id: 1128, name: 'Ocean Sardine', cat: 'foodstuff', unit: '50pcs carton', price: 380, icon: '🐟' },
+    { id: 1129, name: 'Enapa Sardine', cat: 'foodstuff', unit: '50pcs carton', price: 400, icon: '🐟' },
+    { id: 1130, name: 'Enapa Mackerel Smaller100g H/O', cat: 'foodstuff', unit: '50pcs carton', price: 215, icon: '🐟' },
+    { id: 1131, name: 'Enapa Mackerel HO 155g', cat: 'foodstuff', unit: '50pcs carton', price: 325, icon: '🐟' },
+    { id: 1132, name: 'Enapa Mackerel HO 425g', cat: 'foodstuff', unit: '24pcs carton', price: 340, icon: '🐟' },
+    { id: 1133, name: 'Enapa mackerel EO 425g', cat: 'foodstuff', unit: '24pcs carton', price: 350, icon: '🐟' },
+    { id: 1134, name: 'Rambo Beef', cat: 'foodstuff', unit: 'Wholesale unit', price: 450, icon: '🥫' },
+    { id: 1135, name: 'Kivo pepper 6g', cat: 'foodstuff', unit: '24 strips', price: 128, icon: '🌶️' },
+    { id: 1136, name: 'Kivo pepper 55g', cat: 'foodstuff', unit: '8 strips', price: 310, icon: '🌶️' },
+    { id: 1137, name: 'Kivo pepper 180g', cat: 'foodstuff', unit: '24pcs carton', price: 318, icon: '🌶️' },
+    { id: 1138, name: 'Kivo pepper 440g', cat: 'foodstuff', unit: '12pcs carton', price: 345, icon: '🌶️' },
+    { id: 1139, name: 'Kivo G.O.G 5g', cat: 'foodstuff', unit: '30 strips', price: 195, icon: '🥫' },
+    { id: 1140, name: 'Kivo G.O.G 25g', cat: 'foodstuff', unit: '12 strips', price: 470, icon: '🥫' },
+    { id: 1141, name: 'Kivo Curry plus 3g', cat: 'foodstuff', unit: '24 strips', price: 87, icon: '🧂' },
+    { id: 1142, name: 'Kivo Curry plus 50g', cat: 'foodstuff', unit: '8 strips', price: 306, icon: '🧂' },
+    { id: 1143, name: 'Kivo Curry powder 250g', cat: 'foodstuff', unit: '24pcs carton', price: 204, icon: '🧂' },
+    { id: 1144, name: 'Remie 10g', cat: 'foodstuff', unit: '50 strips', price: 630, icon: '🥫' },
+    { id: 1145, name: 'Remie 50g', cat: 'foodstuff', unit: '12 strips', price: 630, icon: '🥫' },
+    { id: 1146, name: 'Mortase s/s', cat: 'foodstuff', unit: '50 strips', price: 420, icon: '🥫' },
+    { id: 1147, name: 'Mortase B/s', cat: 'foodstuff', unit: '12 strips', price: 430, icon: '🥫' },
+    { id: 1148, name: 'Ayeeko', cat: 'foodstuff', unit: 'Wholesale unit', price: 440, icon: '🥫' },
+    { id: 1149, name: 'Sassa Motto', cat: 'foodstuff', unit: 'Wholesale unit', price: 1400, icon: '🥫' },
+    { id: 1150, name: 'Gino Curry - 85', cat: 'foodstuff', unit: 'Wholesale unit', price: 85, icon: '🥫' },
+    { id: 1151, name: 'Bama Mayonnaise s/s', cat: 'foodstuff', unit: '12pcs carton', price: 260, icon: '🥗' },
+    { id: 1152, name: 'Bama Mayonnaise m/s', cat: 'foodstuff', unit: '12pcs carton', price: 350, icon: '🥗' },
+    { id: 1153, name: 'Bama Mayonnaise B/s', cat: 'foodstuff', unit: '12pcs carton', price: 530, icon: '🥗' },
+    { id: 1154, name: 'Jago Mayonnaise B/s', cat: 'foodstuff', unit: '12pcs carton', price: 415, icon: '🥗' },
+    { id: 1155, name: 'Piya Nutmeg', cat: 'foodstuff', unit: 'Wholesale unit', price: 640, icon: '🥫' },
+    { id: 1157, name: 'Heinz Beanz 415g', cat: 'foodstuff', unit: '24pcs carton', price: 340, icon: '🫘' },
+    { id: 1159, name: 'Lizzy shito', cat: 'foodstuff', unit: '11 strips', price: 295, icon: '🌶️' },
+    { id: 1205, name: 'Crunchy Break', cat: 'foodstuff', unit: '6pks carton', price: 60, icon: '🥫' },
+    { id: 1247, name: 'Multi vita', cat: 'foodstuff', unit: '6pks carton', price: 60, icon: '🥫' },
+
+    // ===== BEVERAGES (64 items) =====
+    { id: 1007, name: 'Nescafe 3in1', cat: 'beverages', unit: '8pcs carton', price: 255, icon: '☕' },
+    { id: 1008, name: 'Nescafe Classic', cat: 'beverages', unit: 'Wholesale unit', price: 1540, icon: '☕' },
+    { id: 1009, name: 'Milo 800g', cat: 'beverages', unit: '12pcs carton', price: 775, icon: '☕' },
+    { id: 1010, name: 'Milo 800g', cat: 'beverages', unit: '6pcs carton', price: 388, icon: '☕' },
+    { id: 1011, name: 'Milo 400g', cat: 'beverages', unit: '12pcs carton', price: 450, icon: '☕' },
+    { id: 1012, name: 'Milo All in one', cat: 'beverages', unit: '20 strips', price: 675, icon: '☕' },
+    { id: 1013, name: 'Milo 20g', cat: 'beverages', unit: '30 strips', price: 570, icon: '☕' },
+    { id: 1014, name: 'Milo Tin', cat: 'beverages', unit: '12pcs carton', price: 565, icon: '☕' },
+    { id: 1015, name: 'Chocolim 800g', cat: 'beverages', unit: '12pcs carton', price: 690, icon: '☕' },
+    { id: 1016, name: 'Chocolim 400g', cat: 'beverages', unit: '20pcs carton', price: 620, icon: '☕' },
+    { id: 1017, name: 'Choco milo', cat: 'beverages', unit: '40pcs carton', price: 745, icon: '☕' },
+    { id: 1030, name: 'Cowbell Coffee New', cat: 'beverages', unit: '12 strips', price: 420, icon: '🥛' },
+    { id: 1060, name: 'Blue pearl Coffee Tin s/s', cat: 'beverages', unit: '24pcs carton', price: 270, icon: '☕' },
+    { id: 1061, name: 'Malt', cat: 'beverages', unit: '24pcs carton', price: 170, icon: '🍺' },
+    { id: 1062, name: 'Sprite and Fanta', cat: 'beverages', unit: '24pcs carton', price: 150, icon: '🥤' },
+    { id: 1079, name: 'Hot Chocolate Drink', cat: 'beverages', unit: '12pcs carton', price: 350, icon: '☕' },
+    { id: 1080, name: 'Richoco 800g', cat: 'beverages', unit: '12pcs carton', price: 785, icon: '☕' },
+    { id: 1081, name: 'Richoco 400g', cat: 'beverages', unit: '20pcs carton', price: 750, icon: '☕' },
+    { id: 1082, name: 'Top choco Drink', cat: 'beverages', unit: '10 strips', price: 178, icon: '☕' },
+    { id: 1083, name: 'Top choco cup', cat: 'beverages', unit: '4jars', price: 340, icon: '☕' },
+    { id: 1084, name: 'Top choco 18g', cat: 'beverages', unit: '18 strips', price: 140, icon: '☕' },
+    { id: 1085, name: 'Top choco 650g', cat: 'beverages', unit: '12pcs carton', price: 403, icon: '☕' },
+    { id: 1086, name: 'Top choco 500g', cat: 'beverages', unit: '18pcs carton', price: 490, icon: '☕' },
+    { id: 1087, name: 'Top choco 370g', cat: 'beverages', unit: '12pcs carton', price: 242, icon: '☕' },
+    { id: 1088, name: 'Top choco 250g', cat: 'beverages', unit: '12pcs carton', price: 175, icon: '☕' },
+    { id: 1095, name: 'Ovaltin', cat: 'beverages', unit: '12pcs carton', price: 575, icon: '🥤' },
+    { id: 1098, name: 'Kellogs 45g', cat: 'beverages', unit: '10 strips', price: 450, icon: '🥣' },
+    { id: 1099, name: 'Fortin Oat', cat: 'beverages', unit: '20pcs carton', price: 310, icon: '🥣' },
+    { id: 1100, name: 'Good morning Oats', cat: 'beverages', unit: '12pcs carton', price: 310, icon: '🥣' },
+    { id: 1101, name: 'Kleo Oat', cat: 'beverages', unit: '20pcs carton', price: 210, icon: '🥣' },
+    { id: 1102, name: 'Maman Oats', cat: 'beverages', unit: '15pcs carton', price: 135, icon: '🥣' },
+    { id: 1103, name: 'Piya oats', cat: 'beverages', unit: '20pcs carton', price: 205, icon: '🥣' },
+    { id: 1104, name: 'Quaker Oats 400g', cat: 'beverages', unit: '12pcs carton', price: 740, icon: '🥣' },
+    { id: 1105, name: 'Quaker Oats 400g', cat: 'beverages', unit: '24pcs carton', price: 740, icon: '🥣' },
+    { id: 1106, name: 'Zesta', cat: 'beverages', unit: '12pcs carton', price: 210, icon: '🥤' },
+    { id: 1107, name: 'BonTea b/s', cat: 'beverages', unit: '12pcs carton', price: 310, icon: '🍵' },
+    { id: 1108, name: 'BonTea s/s', cat: 'beverages', unit: '48pcs carton', price: 300, icon: '🍵' },
+    { id: 1109, name: 'Lipton s/s', cat: 'beverages', unit: '20pcs carton', price: 180, icon: '🍵' },
+    { id: 1110, name: 'Hette Premium B/s', cat: 'beverages', unit: '12pcs carton', price: 370, icon: '🥤' },
+    { id: 1111, name: 'Hette Premium s/s', cat: 'beverages', unit: '24pcs carton', price: 195, icon: '🥤' },
+    { id: 1112, name: 'Hette Flavoured old', cat: 'beverages', unit: '12pcs carton', price: 200, icon: '🥤' },
+    { id: 1113, name: 'Hette Assorted new', cat: 'beverages', unit: '12pks carton', price: 290, icon: '🥤' },
+    { id: 1114, name: 'Hette Strawberry new', cat: 'beverages', unit: '12pks carton', price: 290, icon: '🥤' },
+    { id: 1115, name: 'Chelsea Tea', cat: 'beverages', unit: '10pcks', price: 315, icon: '🍵' },
+    { id: 1119, name: 'St. Louis', cat: 'beverages', unit: '5 packs × 10 pcs', price: 145, icon: '🥤' },
+    { id: 1163, name: 'Morning Break (NUTRI)', cat: 'beverages', unit: '6pks carton', price: 60, icon: '🥣' },
+    { id: 1164, name: 'NutriSnax Morning Break Choco 28.8g', cat: 'beverages', unit: '6pks carton', price: 60, icon: '🥣' },
+    { id: 1166, name: 'Nurisnax Tea Time', cat: 'beverages', unit: '4pks carton', price: 82, icon: '🍵' },
+    { id: 1178, name: 'Munchee Shortcake -Ginger B/S.', cat: 'beverages', unit: '4pks carton', price: 140, icon: '🍪' },
+    { id: 1180, name: 'Munchee Ginger B/S', cat: 'beverages', unit: '6pks carton', price: 135, icon: '🫚' },
+    { id: 1189, name: 'Breakfast Cereal', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🥣' },
+    { id: 1190, name: 'Choco Cereal', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🥣' },
+    { id: 1191, name: 'H&H Cereal', cat: 'beverages', unit: '12 strips', price: 165, icon: '🥣' },
+    { id: 1208, name: 'London Oats Digestive', cat: 'beverages', unit: '36pcs carton', price: 135, icon: '🥣' },
+    { id: 1209, name: 'London Oats Digestive', cat: 'beverages', unit: '6*6', price: 155, icon: '🥣' },
+    { id: 1211, name: 'Tiger Malt N Milk', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🥛' },
+    { id: 1226, name: 'Malt & milk', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🥛' },
+    { id: 1228, name: 'Rich Tea Creams strawberry', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🍵' },
+    { id: 1229, name: 'Rich Tea Creams chocolate', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🍵' },
+    { id: 1230, name: 'Rich Tea Creams vanilla', cat: 'beverages', unit: '6pks carton', price: 63, icon: '🍵' },
+    { id: 1232, name: 'Rich tea', cat: 'beverages', unit: '6pks carton', price: 40, icon: '🍵' },
+    { id: 1240, name: 'Malty b/s', cat: 'beverages', unit: '4pks carton', price: 82, icon: '🍺' },
+    { id: 1241, name: 'Malty s/s', cat: 'beverages', unit: '6pks carton', price: 60, icon: '🍺' },
+    { id: 1277, name: 'Tea pot matches', cat: 'beverages', unit: '10pks carton', price: 230, icon: '🍵' },
+
+    // ===== HOUSEHOLD (116 items) =====
+    { id: 1156, name: 'Glade pepper', cat: 'household', unit: '12pcs carton', price: 260, icon: '💨' },
+    { id: 1158, name: 'Lavonce Bucket', cat: 'household', unit: 'Wholesale unit', price: 150, icon: '🪣' },
+    { id: 1173, name: 'Milky Magic m/s', cat: 'household', unit: '6pks carton', price: 60, icon: '🥛' },
+    { id: 1194, name: 'Jumbo 3+2', cat: 'household', unit: '4pks carton', price: 90, icon: '🧼' },
+    { id: 1264, name: 'Heaven Coil', cat: 'household', unit: '60pcs carton', price: 780, icon: '🦟' },
+    { id: 1265, name: 'Sasso Coil', cat: 'household', unit: '60pcs carton', price: 835, icon: '🦟' },
+    { id: 1266, name: 'Holy Coil', cat: 'household', unit: '60pcs carton', price: 420, icon: '🦟' },
+    { id: 1267, name: 'Fatala Coil', cat: 'household', unit: '60pcs carton', price: 430, icon: '🦟' },
+    { id: 1268, name: 'Heaven Spray 400ml', cat: 'household', unit: '24pcs carton', price: 790, icon: '🦟' },
+    { id: 1269, name: 'Holy Spray', cat: 'household', unit: '24pcs carton', price: 480, icon: '🦟' },
+    { id: 1270, name: 'Sasso spray 400ml', cat: 'household', unit: '24pcs carton', price: 780, icon: '🦟' },
+    { id: 1271, name: 'Kill it spray 400ml', cat: 'household', unit: '24pcs carton', price: 650, icon: '🦟' },
+    { id: 1272, name: 'Fatala spray 400ml', cat: 'household', unit: '24pcs carton', price: 690, icon: '🦟' },
+    { id: 1273, name: 'Out Spray 400ml', cat: 'household', unit: '24pcs carton', price: 670, icon: '🦟' },
+    { id: 1274, name: 'AllDays spray 300ml', cat: 'household', unit: '24pcs carton', price: 520, icon: '🦟' },
+    { id: 1275, name: 'AllDays spray 600ml', cat: 'household', unit: '24pcs carton', price: 820, icon: '🦟' },
+    { id: 1276, name: 'Pot Matches', cat: 'household', unit: '12pks carton', price: 630, icon: '🔥' },
+    { id: 1278, name: 'AllDays Matches', cat: 'household', unit: '10pks carton', price: 240, icon: '🦟' },
+    { id: 1279, name: 'Envelope', cat: 'household', unit: '20pks carton', price: 230, icon: '✉️' },
+    { id: 1280, name: 'Candle s/s', cat: 'household', unit: '30pcs carton', price: 310, icon: '🕯️' },
+    { id: 1281, name: 'T-Guard', cat: 'household', unit: '12pks carton', price: 390, icon: '🧴' },
+    { id: 1282, name: 'Miki Liquid Polish', cat: 'household', unit: '12pks carton', price: 810, icon: '🧴' },
+    { id: 1283, name: 'Super Glue _ Mr. Bond', cat: 'household', unit: '30pks carton', price: 670, icon: '🧴' },
+    { id: 1284, name: 'Sunwatt S/s', cat: 'household', unit: '50pks carton', price: 800, icon: '🧴' },
+    { id: 1285, name: 'Tiger Head B/s', cat: 'household', unit: '24pks carton', price: 710, icon: '🧴' },
+    { id: 1286, name: 'Rubber Band', cat: 'household', unit: '60pcs carton', price: 830, icon: '➰' },
+    { id: 1301, name: 'Madar soap b/s', cat: 'household', unit: '36pcs carton', price: 230, icon: '🧼' },
+    { id: 1302, name: 'Madar soap m/s', cat: 'household', unit: '36pcs carton', price: 165, icon: '🧼' },
+    { id: 1303, name: 'Madar soap s/s', cat: 'household', unit: '48pcs carton', price: 135, icon: '🧼' },
+    { id: 1304, name: 'Madar 150g', cat: 'household', unit: '40pcs carton', price: 145, icon: '🧼' },
+    { id: 1305, name: 'Madar 2.7kg', cat: 'household', unit: '6pcs carton', price: 350, icon: '🧼' },
+    { id: 1306, name: 'Madar 80g', cat: 'household', unit: '100pcs carton', price: 200, icon: '🧼' },
+    { id: 1307, name: 'Madar renzo 2litres', cat: 'household', unit: '6pcs carton', price: 210, icon: '🧼' },
+    { id: 1308, name: 'Madar renzo 750ml', cat: 'household', unit: '12pcs carton', price: 170, icon: '🧼' },
+    { id: 1309, name: 'Madar renzo 400ml', cat: 'household', unit: '12pcs carton', price: 115, icon: '🧼' },
+    { id: 1310, name: 'Madar renzo 200ml', cat: 'household', unit: '24pcs carton', price: 120, icon: '🧼' },
+    { id: 1311, name: 'Madar zone 1ltr', cat: 'household', unit: '12pcs carton', price: 145, icon: '🧼' },
+    { id: 1312, name: 'Madar zone 500ml', cat: 'household', unit: '12pcs carton', price: 95, icon: '🧼' },
+    { id: 1313, name: 'Perla soap big', cat: 'household', unit: '18pcs carton', price: 115, icon: '🧼' },
+    { id: 1314, name: 'Perla soap small', cat: 'household', unit: '36pcs carton', price: 135, icon: '🧼' },
+    { id: 1315, name: 'Mabel soap', cat: 'household', unit: '18pcs carton', price: 90, icon: '🧼' },
+    { id: 1316, name: 'MAGICO big', cat: 'household', unit: '24pcs carton', price: 195, icon: '🧼' },
+    { id: 1317, name: 'MAGICO medium', cat: 'household', unit: '36pcs carton', price: 195, icon: '🧼' },
+    { id: 1318, name: 'MAGICO small', cat: 'household', unit: '48pcs carton', price: 135, icon: '🧼' },
+    { id: 1319, name: 'Maya big', cat: 'household', unit: '24pcs carton', price: 195, icon: '🧼' },
+    { id: 1320, name: 'Maya medium', cat: 'household', unit: '40pcs carton', price: 195, icon: '🧼' },
+    { id: 1321, name: 'MAGICO power', cat: 'household', unit: '40pcs carton', price: 240, icon: '🧼' },
+    { id: 1322, name: 'Jamaa big', cat: 'household', unit: '24pcs carton', price: 170, icon: '🧼' },
+    { id: 1323, name: 'Jamaa medium', cat: 'household', unit: '24pcs carton', price: 120, icon: '🧼' },
+    { id: 1324, name: 'Jamaa small', cat: 'household', unit: '48pcs carton', price: 150, icon: '🧼' },
+    { id: 1325, name: 'Jamaa bar', cat: 'household', unit: '16pcs carton', price: 300, icon: '🧼' },
+    { id: 1326, name: 'Juliet soap', cat: 'household', unit: '36pcs carton', price: 270, icon: '🧼' },
+    { id: 1327, name: 'Alife big', cat: 'household', unit: '18pcs carton', price: 135, icon: '🧴' },
+    { id: 1328, name: 'Alife small', cat: 'household', unit: '40pcs carton', price: 140, icon: '🧴' },
+    { id: 1329, name: 'Gye nyame soap', cat: 'household', unit: '48pcs carton', price: 220, icon: '🍠' },
+    { id: 1330, name: 'Good mama', cat: 'household', unit: '6 strips', price: 140, icon: '🧼' },
+    { id: 1331, name: 'BF soap', cat: 'household', unit: '36pcs carton', price: 390, icon: '🧼' },
+    { id: 1332, name: 'Medisoft', cat: 'household', unit: '12 packs', price: 380, icon: '🧴' },
+    { id: 1333, name: 'Kris soap', cat: 'household', unit: '36pcs carton', price: 420, icon: '🧼' },
+    { id: 1334, name: 'Jumbo', cat: 'household', unit: '30pcs carton', price: 225, icon: '🧼' },
+    { id: 1335, name: 'Aqualis', cat: 'household', unit: '60pcs carton', price: 240, icon: '🧼' },
+    { id: 1336, name: 'Aqualis jumbo', cat: 'household', unit: '30pcs carton', price: 220, icon: '🧼' },
+    { id: 1337, name: 'Beliar big', cat: 'household', unit: '24', price: 170, icon: '🧼' },
+    { id: 1338, name: 'Beliar medium', cat: 'household', unit: '40', price: 180, icon: '🧼' },
+    { id: 1339, name: 'Meditwist', cat: 'household', unit: '36pcs carton', price: 420, icon: '🧴' },
+    { id: 1340, name: 'Imperial leather', cat: 'household', unit: '6 packs', price: 445, icon: '🧼' },
+    { id: 1341, name: 'Royal leather b/s', cat: 'household', unit: '12 packs', price: 420, icon: '🧼' },
+    { id: 1342, name: 'Siri soap', cat: 'household', unit: '12 packs', price: 420, icon: '🧼' },
+    { id: 1343, name: 'Lux soap', cat: 'household', unit: '24 packs', price: 480, icon: '🧼' },
+    { id: 1344, name: 'Royal after wash', cat: 'household', unit: '6 strips', price: 270, icon: '🧴' },
+    { id: 1345, name: 'So Klin 170g', cat: 'household', unit: '6 strips', price: 150, icon: '🧴' },
+    { id: 1346, name: 'So Klin 65g', cat: 'household', unit: '8 strips', price: 140, icon: '🧴' },
+    { id: 1347, name: 'So Klin 22g', cat: 'household', unit: '24 strips', price: 150, icon: '🧴' },
+    { id: 1348, name: 'Viva 170g', cat: 'household', unit: '6 strips', price: 140, icon: '🧴' },
+    { id: 1349, name: 'Viva 800g', cat: 'household', unit: '7pcs carton', price: 160, icon: '🧴' },
+    { id: 1350, name: 'Viva 80g', cat: 'household', unit: '12 strips', price: 140, icon: '🧴' },
+    { id: 1351, name: 'Power zone big', cat: 'household', unit: '20pcs carton', price: 200, icon: '🧴' },
+    { id: 1352, name: 'Power zone small', cat: 'household', unit: '24pcs carton', price: 240, icon: '🧴' },
+    { id: 1353, name: 'Gfj 2.5kg', cat: 'household', unit: '6pcs carton', price: 245, icon: '🧴' },
+    { id: 1354, name: 'Gfj 900g', cat: 'household', unit: '10pcs carton', price: 150, icon: '🧴' },
+    { id: 1355, name: 'Gfj 80g', cat: 'household', unit: '20 strips', price: 150, icon: '🧴' },
+    { id: 1356, name: 'Gfj 50g', cat: 'household', unit: '20 strips', price: 85, icon: '🧴' },
+    { id: 1357, name: 'Mok 900g', cat: 'household', unit: '10pcs carton', price: 150, icon: '🧴' },
+    { id: 1358, name: 'Mok 80g', cat: 'household', unit: '20 strips', price: 150, icon: '🧴' },
+    { id: 1359, name: 'Mok 50g', cat: 'household', unit: '20 strips', price: 85, icon: '🧴' },
+    { id: 1360, name: 'OBOLO jumbo mini', cat: 'household', unit: '48pcs carton', price: 210, icon: '🧼' },
+    { id: 1361, name: 'OBOLO jumbo max', cat: 'household', unit: '32pcs carton', price: 245, icon: '🧼' },
+    { id: 1362, name: 'Benko soap', cat: 'household', unit: '24pcs carton', price: 180, icon: '🧼' },
+    { id: 1363, name: 'OBOLO kente', cat: 'household', unit: '48pcs carton', price: 245, icon: '🧴' },
+    { id: 1364, name: 'Oro grape', cat: 'household', unit: '50pcs carton', price: 250, icon: '🧴' },
+    { id: 1365, name: 'Oro 3.5kg', cat: 'household', unit: '6pcs carton', price: 250, icon: '🧴' },
+    { id: 1366, name: '⁠B20 soap', cat: 'household', unit: '40pcs carton', price: 170, icon: '🧼' },
+    { id: 1367, name: 'Kleesoft soap big', cat: 'household', unit: '36pcs carton', price: 170, icon: '🧼' },
+    { id: 1368, name: 'Kleesoft soap small', cat: 'household', unit: '48pcs carton', price: 125, icon: '🧼' },
+    { id: 1369, name: 'Kleesoft soap colors', cat: 'household', unit: '24pcs carton', price: 155, icon: '🧼' },
+    { id: 1370, name: 'Avril soap big', cat: 'household', unit: '36pcs carton', price: 210, icon: '🧼' },
+    { id: 1371, name: 'Avril soap small', cat: 'household', unit: '40pcs carton', price: 140, icon: '🧼' },
+    { id: 1372, name: 'Dr x soap', cat: 'household', unit: '36pcs carton', price: 135, icon: '🧼' },
+    { id: 1373, name: 'Athena soap', cat: 'household', unit: '36pcs carton', price: 140, icon: '🧼' },
+    { id: 1374, name: 'Kleesoft 150g', cat: 'household', unit: '40pcs carton', price: 140, icon: '🧼' },
+    { id: 1375, name: 'Kleesoft 80g', cat: 'household', unit: '20 strips', price: 175, icon: '🧼' },
+    { id: 1376, name: 'Kleesoft 850g', cat: 'household', unit: '10pcs carton', price: 190, icon: '🧼' },
+    { id: 1377, name: 'Kleesoft 2kg', cat: 'household', unit: '5pcs carton', price: 210, icon: '🧼' },
+    { id: 1378, name: 'Kleesoft 4.5kg', cat: 'household', unit: '6pcs carton', price: 285, icon: '🧼' },
+    { id: 1379, name: 'Kleesoft bucket', cat: 'household', unit: 'Wholesale unit', price: 80, icon: '🧼' },
+    { id: 1380, name: 'Lavita 40g', cat: 'household', unit: '20 strips', price: 85, icon: '🧼' },
+    { id: 1381, name: 'Lavita 80g', cat: 'household', unit: '20 strips', price: 140, icon: '🧼' },
+    { id: 1382, name: 'Lavita 50g', cat: 'household', unit: '20 strips', price: 85, icon: '🧼' },
+    { id: 1383, name: 'Lavita 400g', cat: 'household', unit: '15pcs carton', price: 90, icon: '🧼' },
+    { id: 1384, name: 'Lavita 2.7kg', cat: 'household', unit: '6pcs carton', price: 270, icon: '🧼' },
+    { id: 1385, name: 'Geisha', cat: 'household', unit: '36pcs carton', price: 400, icon: '🐟' },
+    { id: 1386, name: 'Geisha black', cat: 'household', unit: '36pcs carton', price: 485, icon: '🐟' },
+    { id: 1387, name: 'Geisha moringa', cat: 'household', unit: '36pcs carton', price: 420, icon: '🐟' },
+    { id: 1388, name: 'Keysoap 1000g', cat: 'household', unit: '16pcs carton', price: 415, icon: '🧼' },
+    { id: 1389, name: 'Keysoap 800g', cat: 'household', unit: '16pcs carton', price: 345, icon: '🧼' },
+    { id: 1404, name: 'Toilet Roll', cat: 'household', unit: '7 packs', price: 130, icon: '🫒' },
+
+    // ===== BABY & PERSONAL CARE (38 items) =====
+    { id: 1019, name: 'Wheat Sachets', cat: 'baby', unit: '8 strips', price: 380, icon: '🌾' },
+    { id: 1020, name: 'Maize Sachet', cat: 'baby', unit: '8 strips', price: 385, icon: '🌾' },
+    { id: 1021, name: 'Rice sachet', cat: 'baby', unit: '8pcs carton', price: 420, icon: '🌾' },
+    { id: 1022, name: 'Maize Tin', cat: 'baby', unit: '12pcs carton', price: 430, icon: '🌾' },
+    { id: 1023, name: 'Wheat Tin', cat: 'baby', unit: '12pcs carton', price: 430, icon: '🌾' },
+    { id: 1024, name: 'Rice Tin', cat: 'baby', unit: '12pcs carton', price: 430, icon: '🌾' },
+    { id: 1025, name: 'Fruit Tin', cat: 'baby', unit: '12pcs carton', price: 465, icon: '👶' },
+    { id: 1026, name: 'Nido 1+', cat: 'baby', unit: '12pcs carton', price: 1200, icon: '🥛' },
+    { id: 1027, name: 'Nan 1 &2', cat: 'baby', unit: '12pcs carton', price: 1215, icon: '👶' },
+    { id: 1028, name: 'Lactogen 1& 2', cat: 'baby', unit: '12pcs carton', price: 870, icon: '👶' },
+    { id: 1287, name: 'Lord Shaving', cat: 'baby', unit: '5pks carton', price: 930, icon: '🪒' },
+    { id: 1288, name: 'Lord Blade', cat: 'baby', unit: '100pks carton', price: 3700, icon: '🪒' },
+    { id: 1289, name: 'Dorco Shaving', cat: 'baby', unit: 'Wholesale unit', price: 190, icon: '🪒' },
+    { id: 1290, name: 'SuperMax Blade', cat: 'baby', unit: '50pks carton', price: 2780, icon: '🪒' },
+    { id: 1291, name: 'SuperMax Piller', cat: 'baby', unit: '80pks carton', price: 3600, icon: '🪥' },
+    { id: 1292, name: 'Pepsodent sachet', cat: 'baby', unit: 'Wholesale unit', price: 325, icon: '🪥' },
+    { id: 1293, name: 'Pepsodent B/s', cat: 'baby', unit: '12pks carton', price: 1190, icon: '🪥' },
+    { id: 1294, name: 'Pepsodent s/s', cat: 'baby', unit: '12pks carton', price: 500, icon: '🪥' },
+    { id: 1295, name: 'Pepsodent Charcoal', cat: 'baby', unit: '12pks carton', price: 1275, icon: '🪥' },
+    { id: 1296, name: 'Yazz Brush', cat: 'baby', unit: '24pcs carton', price: 670, icon: '🪥' },
+    { id: 1297, name: 'Yazz brush', cat: 'baby', unit: '12pcs carton', price: 360, icon: '🪥' },
+    { id: 1298, name: 'Kel Charcoal', cat: 'baby', unit: '6pcks', price: 880, icon: '🪵' },
+    { id: 1299, name: 'Kel Charcoal B/s', cat: 'baby', unit: '8pks carton', price: 550, icon: '🪵' },
+    { id: 1300, name: 'VIP brush', cat: 'baby', unit: '24pcs carton', price: 240, icon: '🪥' },
+    { id: 1390, name: 'Softcare diapers M-12', cat: 'baby', unit: '10pcs carton', price: 235, icon: '🧻' },
+    { id: 1391, name: 'Softcare diapers L-11', cat: 'baby', unit: '10pcs carton', price: 235, icon: '🧻' },
+    { id: 1392, name: 'Softcare diapers S-15', cat: 'baby', unit: '10pcs carton', price: 235, icon: '🧻' },
+    { id: 1393, name: 'Softcare diapers L-40(6packs]', cat: 'baby', unit: 'Wholesale unit', price: 435, icon: '🧻' },
+    { id: 1394, name: 'Softcare diapers M-42', cat: 'baby', unit: 'packs', price: 435, icon: '🧻' },
+    { id: 1395, name: 'Softcare diapers S-48', cat: 'baby', unit: 'packs', price: 435, icon: '🧻' },
+    { id: 1396, name: 'Softcare Diapers double', cat: 'baby', unit: '4pcs carton', price: 435, icon: '🧻' },
+    { id: 1397, name: 'Cutie L-11,M-12,S-15', cat: 'baby', unit: '10 packs', price: 175, icon: '👶' },
+    { id: 1398, name: 'Cutie double M-24', cat: 'baby', unit: '10 packs', price: 340, icon: '👶' },
+    { id: 1399, name: 'Cutie by 50', cat: 'baby', unit: '4 packs', price: 280, icon: '👶' },
+    { id: 1400, name: 'Sweet Bebe diapers', cat: 'baby', unit: '10pcs carton', price: 200, icon: '🍬' },
+    { id: 1401, name: 'Sweet lady pad', cat: 'baby', unit: '24pcs carton', price: 140, icon: '🍬' },
+    { id: 1402, name: 'Softcare pad', cat: 'baby', unit: '24pcs carton', price: 260, icon: '🧻' },
+    { id: 1403, name: 'Yazz pad', cat: 'baby', unit: '24pcs carton', price: 320, icon: '🩸' },
+
+    // ===== SNACKS (82 items) =====
+    { id: 1160, name: 'Nutrisnax B/S', cat: 'snacks', unit: '6pks carton', price: 147, icon: '🍪' },
+    { id: 1161, name: 'Nutrisnax M/S', cat: 'snacks', unit: '12pks carton', price: 115, icon: '🍪' },
+    { id: 1162, name: 'NutriSnax Granola Bar 84g', cat: 'snacks', unit: '6pks carton', price: 145, icon: '🍪' },
+    { id: 1165, name: 'Nutribar', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1167, name: 'King Cracker B/S', cat: 'snacks', unit: '4pks carton', price: 82, icon: '🍪' },
+    { id: 1168, name: 'King Cracker S/S', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1169, name: 'Perk Milk Shortcake B/s', cat: 'snacks', unit: '4pks carton', price: 82, icon: '🥛' },
+    { id: 1170, name: 'Perk Milk Shortcake s/s', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥛' },
+    { id: 1171, name: 'Perk Choco Shortcake B/s', cat: 'snacks', unit: '4pks carton', price: 80, icon: '🍪' },
+    { id: 1172, name: 'Perk Choco Shortcake S/s', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1174, name: 'Royal Cream Yum', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥗' },
+    { id: 1175, name: 'Royal Digestive 27g', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1176, name: 'Munchee Shortcake -milk B/S', cat: 'snacks', unit: '4pks carton', price: 140, icon: '🥛' },
+    { id: 1177, name: 'Munchee Shortcake -milk S/S.', cat: 'snacks', unit: '4pks carton', price: 95, icon: '🥛' },
+    { id: 1179, name: 'Munchee Shortcake -MIX B/S', cat: 'snacks', unit: '4pks carton', price: 95, icon: '🍪' },
+    { id: 1181, name: 'Munchee Cookies B/S', cat: 'snacks', unit: '6 packs × 48 pcs', price: 300, icon: '🍪' },
+    { id: 1182, name: 'Munchee Cookies S/S', cat: 'snacks', unit: '4 packs × 48 pcs', price: 160, icon: '🍪' },
+    { id: 1183, name: 'Chicago OChoc Choco CB 23g', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1184, name: 'Banana Crunch', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1185, name: 'Choco Crunch', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1186, name: 'Milk Crunch', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥛' },
+    { id: 1187, name: 'Choco Maxi', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1188, name: 'Happy Face', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1192, name: 'Bless', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1193, name: '3+2', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1195, name: 'Epico B/s', cat: 'snacks', unit: '12pks carton', price: 115, icon: '🍪' },
+    { id: 1196, name: 'Epico S/s', cat: 'snacks', unit: '24pks carton', price: 125, icon: '🍪' },
+    { id: 1197, name: 'Burbon B/s', cat: 'snacks', unit: '4pks carton', price: 135, icon: '🍪' },
+    { id: 1198, name: 'Bourbon m/s', cat: 'snacks', unit: '4pks carton', price: 95, icon: '🍪' },
+    { id: 1199, name: 'Bourbon S/S', cat: 'snacks', unit: '6pks carton', price: 90, icon: '🍪' },
+    { id: 1200, name: 'Kreambis', cat: 'snacks', unit: '6pks carton', price: 120, icon: '🍪' },
+    { id: 1201, name: 'Bella cake', cat: 'snacks', unit: '6pcks', price: 245, icon: '🎂' },
+    { id: 1202, name: 'Lovan Wafer B/S', cat: 'snacks', unit: '12pks carton', price: 115, icon: '🍪' },
+    { id: 1203, name: 'Lovan Wafer S/S', cat: 'snacks', unit: '24pks carton', price: 125, icon: '🍪' },
+    { id: 1204, name: 'Lovan cake', cat: 'snacks', unit: '6 strips', price: 60, icon: '🎂' },
+    { id: 1206, name: 'Alpha Cracker B/s', cat: 'snacks', unit: '4pks carton', price: 85, icon: '🍪' },
+    { id: 1207, name: 'Oxford', cat: 'snacks', unit: '4pks carton', price: 40, icon: '🍪' },
+    { id: 1210, name: 'London shortbread', cat: 'snacks', unit: 'Wholesale unit', price: 145, icon: '🍪' },
+    { id: 1212, name: 'Ring Cookies', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1213, name: 'Yupp', cat: 'snacks', unit: '6pks carton', price: 30, icon: '🍪' },
+    { id: 1214, name: 'Twist', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1215, name: 'Twin', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1216, name: 'Sugar Free', cat: 'snacks', unit: '12pks carton', price: 120, icon: '🧂' },
+    { id: 1217, name: 'Soda Biscuits', cat: 'snacks', unit: '12pks carton', price: 280, icon: '🥤' },
+    { id: 1218, name: 'All milk', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥛' },
+    { id: 1219, name: 'Heart', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1220, name: 'Pure delight', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1221, name: 'Creamy twins', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥗' },
+    { id: 1222, name: 'Alpha cracker s/s', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1223, name: 'Choco bite', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1224, name: 'Milky bite', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🥛' },
+    { id: 1225, name: 'Milky blast', cat: 'snacks', unit: '4pks carton', price: 80, icon: '🥛' },
+    { id: 1227, name: 'Tokyo', cat: 'snacks', unit: '6pks carton', price: 63, icon: '🍪' },
+    { id: 1231, name: 'Good luck', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1233, name: 'Simply good b/s', cat: 'snacks', unit: '4pks carton', price: 95, icon: '🍪' },
+    { id: 1234, name: 'Simply good 4/s', cat: 'snacks', unit: '6pks carton', price: 82, icon: '🍪' },
+    { id: 1235, name: 'Simply good s/s', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1236, name: 'Milk cracker b/s', cat: 'snacks', unit: '4pks carton', price: 80, icon: '🥛' },
+    { id: 1237, name: 'Krack Jack b/s', cat: 'snacks', unit: '4pks carton', price: 95, icon: '🍪' },
+    { id: 1238, name: 'Krack Jack s/s', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1239, name: 'Choco rings', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1242, name: 'Milk power', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥛' },
+    { id: 1243, name: 'Festo b/s', cat: 'snacks', unit: '4pks carton', price: 82, icon: '🍪' },
+    { id: 1244, name: 'Festo s/s', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1245, name: 'Milk Cracker B/S', cat: 'snacks', unit: '4pks carton', price: 95, icon: '🥛' },
+    { id: 1246, name: 'Milk cracker 24g', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🥛' },
+    { id: 1248, name: 'Lite bite 23g', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1249, name: 'Choco blast', cat: 'snacks', unit: '4pks carton', price: 80, icon: '🍪' },
+    { id: 1250, name: 'Sky High', cat: 'snacks', unit: '12 pcks', price: 235, icon: '🍪' },
+    { id: 1251, name: 'Kremio 22g', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1252, name: 'RikRak', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🍪' },
+    { id: 1253, name: 'Dubai Biscuits', cat: 'snacks', unit: '12pks carton', price: 115, icon: '🍪' },
+    { id: 1254, name: 'Big Daddy', cat: 'snacks', unit: '12pks carton', price: 225, icon: '🍪' },
+    { id: 1255, name: 'Gari Biscuits', cat: 'snacks', unit: '6pks carton', price: 60, icon: '🌾' },
+    { id: 1256, name: 'Butter Fingers', cat: 'snacks', unit: '10 strips', price: 60, icon: '🧈' },
+    { id: 1257, name: 'Cheese balls', cat: 'snacks', unit: '6 strips', price: 60, icon: '🍪' },
+    { id: 1258, name: 'Shemema', cat: 'snacks', unit: 'Wholesale unit', price: 90, icon: '🥜' },
+    { id: 1259, name: 'Nkatie Burger', cat: 'snacks', unit: '6pcks', price: 140, icon: '🥜' },
+    { id: 1260, name: 'Nkatie Burger B/S', cat: 'snacks', unit: '12', price: 410, icon: '🥜' },
+    { id: 1261, name: 'Super Mint cool', cat: 'snacks', unit: '10pks carton', price: 360, icon: '🍬' },
+    { id: 1262, name: 'TomTom', cat: 'snacks', unit: '25pks carton', price: 230, icon: '🍬' },
+    { id: 1263, name: 'Tomtom', cat: 'snacks', unit: '36pcs carton', price: 360, icon: '🍬' },
+
+  ];
+
+  // === BUSINESS CONFIG ===
+  // Replace this with your real WhatsApp Business number.
+  // Format: country code + number, no spaces or "+" — e.g. 233241234567 for +233 24 123 4567
+  const BUSINESS_WHATSAPP = '233249042264';
+  const BUSINESS_NAME = 'Marketprice Delivery';
+
+  // FORMSPREE: To receive orders by email, sign up free at https://formspree.io
+  // Create a new form and paste the form ID below (it looks like 'xnqkojvl').
+  // While this is empty, email forwarding is OFF (WhatsApp + browser storage still work).
+  const FORMSPREE_ID = 'xrejendj';  // https://formspree.io/f/xrejendj
+
+  // ADMIN PASSWORD: only you should know this. Used to view the orders dashboard.
+  // Change this to something only you know. Visit /#admin-orders to access the dashboard.
+  const ADMIN_PASSWORD = 'marketprice2026';
+
+  // === ORDER STORAGE ===
+  // Uses browser localStorage. Each browser keeps its own copy:
+  // - On a CUSTOMER's device: their personal order history (receipts)
+  // - On YOUR device (owner): a record of test orders + any orders placed via your browser
+  // For full owner visibility across all customers, set up FORMSPREE_ID above.
+  const STORAGE_KEYS = {
+    counter: 'lmp_order_counter',
+    orders:  'lmp_orders',
+  };
+
+  function nextOrderId() {
+    let n = parseInt(localStorage.getItem(STORAGE_KEYS.counter) || '0', 10);
+    n += 1;
+    localStorage.setItem(STORAGE_KEYS.counter, String(n));
+    // Pad to 4 digits, e.g. LMP-0001
+    return 'LMP-' + String(n).padStart(4, '0');
+  }
+
+  function saveOrder(order) {
+    try {
+      const existing = JSON.parse(localStorage.getItem(STORAGE_KEYS.orders) || '[]');
+      existing.unshift(order);  // newest first
+      // Cap at 500 orders to avoid storage bloat
+      if (existing.length > 500) existing.length = 500;
+      localStorage.setItem(STORAGE_KEYS.orders, JSON.stringify(existing));
+      return true;
+    } catch (e) {
+      console.error('Could not save order:', e);
+      return false;
+    }
+  }
+
+  function loadOrders() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEYS.orders) || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+
+  // Send order to Formspree (email forwarding)
+  async function emailOrder(order, whatsappMessage) {
+    if (!FORMSPREE_ID) return { ok: false, skipped: true };
+    try {
+      // Use FormData (multipart/form-data) instead of JSON.
+      // This avoids the CORS preflight (OPTIONS request) that JSON triggers,
+      // which is the most common cause of "Failed to fetch" with Formspree.
+      const formData = new FormData();
+      formData.append('_subject', `New order ${order.id} · ${order.name}`);
+      formData.append('orderId', order.id);
+      formData.append('name', order.name);
+      formData.append('phone', order.phone);
+      formData.append('address', order.address || '(pickup)');
+      formData.append('notes', order.notes || '');
+      formData.append('deliveryMethod', order.deliveryName);
+      formData.append('deliveryFee', String(order.deliveryFee));
+      formData.append('paymentNetwork', order.momoNetwork);
+      formData.append('paymentNumber', order.momoNumber);
+      formData.append('subtotal', String(order.subtotal));
+      formData.append('total', String(order.total));
+      formData.append('itemCount', String(order.itemCount));
+      formData.append('items', order.items.map(i => `${i.name} (${i.unit}) × ${i.qty} = GH₵ ${i.lineTotal}`).join('\n'));
+      formData.append('fullMessage', whatsappMessage);
+
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },  // No Content-Type — browser sets multipart boundary
+        body: formData,
+      });
+
+      if (!res.ok) {
+        let detail = '';
+        try { detail = JSON.stringify(await res.json()); } catch (_) {}
+        return { ok: false, error: `HTTP ${res.status}${detail ? ' · ' + detail : ''}` };
+      }
+      return { ok: true };
+    } catch (e) {
+      // Network failure (CORS, offline, blocked). The order is still saved
+      // locally and forwarded via WhatsApp, so this is a soft failure.
+      console.warn('Email send failed (order still saved + WhatsApp will work):', e.message);
+      return { ok: false, error: e.message };
+    }
+  }
+
+  // === STATE ===
+  const cart = {};
+  let activeCat = 'all';
+  let selectedNet = 'MTN';
+  let selectedDelivery = { method: 'standard', name: 'Accra Standard', fee: 50, free: 2000 };
+
+  // Catalog pagination — show 10 at a time, load 10 more on click.
+  const PAGE_SIZE = 10;
+  let visibleCount = PAGE_SIZE;
+
+  // === PRODUCT IMAGES ===
+  // Map of product ID → image URL. If a product has an entry here, that photo shows
+  // instead of the emoji. If the URL fails to load, the system falls back to emoji.
+  //
+  // ╔══════════════════════════════════════════════════════════════════╗
+  // ║  HOW TO ADD REAL PRODUCT PHOTOS — 30 seconds per product         ║
+  // ╠══════════════════════════════════════════════════════════════════╣
+  // ║                                                                  ║
+  // ║  EASIEST METHOD — Jumia Ghana:                                   ║
+  // ║   1. Go to jumia.com.gh and search "Milo 800g" (or any product)  ║
+  // ║   2. Right-click the product photo → "Copy image address"        ║
+  // ║   3. Paste below as:    productId: 'pasted-url-here',            ║
+  // ║                                                                  ║
+  // ║  YOUR OWN PHOTOS — Free image hosting:                           ║
+  // ║   1. Visit imgbb.com (no signup needed)                          ║
+  // ║   2. Drag and drop your photo                                    ║
+  // ║   3. Copy the "Direct link" (ends in .jpg)                       ║
+  // ║   4. Paste below                                                 ║
+  // ║                                                                  ║
+  // ║  Product IDs reference:                                          ║
+  // ║   500-504  Carnation, Ideal Milk                                 ║
+  // ║   505-510  Nido, Nan, Lactogen                                   ║
+  // ║   511-513  Nescafé                                               ║
+  // ║   514-518  Milo                                                  ║
+  // ║   519-521  Chocolim, Choco Milo                                  ║
+  // ║   522-529  Cerelac, Golden Morn                                  ║
+  // ║   530-533  Maggi                                                 ║
+  // ║   600-610  Cowbell                                               ║
+  // ║   611-613  Miksi                                                 ║
+  // ║   614-616  Yumvita                                               ║
+  // ║   617-621  Kremela                                               ║
+  // ║   622      Twisco                                                ║
+  // ║   623-629  Onga                                                  ║
+  // ║                                                                  ║
+  // ╚══════════════════════════════════════════════════════════════════╝
+  const PRODUCT_IMAGES = {
+    // Currently empty — every product shows its emoji icon as fallback.
+    // To add a real photo for any product, paste a URL or local path:
+    //   1001: 'images/carnation-160g.jpg',
+    //   1001: 'https://i.ibb.co/xxx/yyy.jpg',
+    // Product IDs run 1001 onwards. See the PRODUCTS array above for each ID.
+  };
+
+  // === RENDER ===
+  const grid = document.getElementById('grid');
+
+  // Hot buys — 10 manually curated popular IDs (edit anytime to change featured items)
+  const HOT_BUY_IDS = [
+    1009, // Milo 800g 12pcs - GH₵ 775
+    1002, // Ideal 370g - GH₵ 540
+    1029, // Maggie Arome 250ml - GH₵ 540
+    1030, // Cowbell Coffee New - GH₵ 420
+    1047, // Onga Shrimp Tab - GH₵ 730 (or 725)
+    1004, // Nido 350g - GH₵ 553
+    1264, // Heaven Coil - GH₵ 780
+    1276, // Pot Matches - GH₵ 630
+    1160, // Nutrisnax B/S - GH₵ 147
+    1001, // Carnation 160g - GH₵ 220
+  ];
+
+  // Retail savings — assumes 15% wholesale-to-retail markup (Ghana FMCG average).
+  // Returns { retail, save } both rounded to whole cedis.
+  const RETAIL_MARKUP = 0.15;
+  function retailSavings(p) {
+    const retail = Math.round(p.price * (1 + RETAIL_MARKUP));
+    const save = retail - p.price;
+    return { retail, save };
+  }
+
+  function renderHotBuys() {
+    const stripEl = document.getElementById('hotStrip');
+    if (!stripEl) return;
+    const items = HOT_BUY_IDS
+      .map(id => PRODUCTS.find(p => p.id === id))
+      .filter(Boolean);  // skip any IDs that don't exist
+
+    stripEl.innerHTML = items.map(p => {
+      const { retail, save } = retailSavings(p);
+      return `
+      <div class="hot-card">
+        <span class="hot-badge">🔥 Hot</span>
+        <div class="hot-img" style="background: ${cardBg(p.cat)}">${productVisual(p)}</div>
+        <div class="hot-body">
+          <h3 class="hot-name">${p.name}</h3>
+          <div class="hot-unit">${p.unit}</div>
+          <div class="hot-savings">
+            <span class="hot-retail">GH₵ ${retail}</span>
+            <span class="hot-save-tag">Save ${save}</span>
+          </div>
+          <div class="hot-foot">
+            <span class="hot-price">GH₵ ${p.price}</span>
+            <button class="hot-add-btn ${cart[p.id] ? 'added' : ''}" onclick="addToCart(${p.id}, this)">
+              ${cart[p.id] ? `✓ ${cart[p.id]}` : '+ Add'}
+            </button>
+          </div>
+        </div>
+      </div>
+    `;}).join('');
+  }
+
+  function renderTabs() {
+    const tabsEl = document.getElementById('tabs');
+    if (!tabsEl) return;
+    const counts = { foodstuff: 0, beverages: 0, household: 0, baby: 0, snacks: 0 };
+    PRODUCTS.forEach(p => { if (counts[p.cat] !== undefined) counts[p.cat]++; });
+
+    const labels = {
+      foodstuff: 'Foodstuff',
+      beverages: 'Beverages',
+      household: 'Household',
+      baby: 'Baby & Personal Care',
+      snacks: 'Snacks',
+    };
+
+    // Display order matters — show in the order most customers shop
+    const order = ['foodstuff', 'beverages', 'household', 'baby', 'snacks'];
+
+    let html = `<button class="tab ${activeCat === 'all' ? 'active' : ''}" data-cat="all">All goods <span class="tab-count">${PRODUCTS.length}</span></button>`;
+    order.forEach(cat => {
+      if (counts[cat] === 0) return;  // hide empty categories
+      html += `<button class="tab ${activeCat === cat ? 'active' : ''}" data-cat="${cat}">${labels[cat]} <span class="tab-count">${counts[cat]}</span></button>`;
+    });
+    tabsEl.innerHTML = html;
+  }
+
+  // Build the visual for a product card.
+  // Priority: real photo (PRODUCT_IMAGES) → cartoon SVG (productArt) → emoji fallback.
+  // If image fails to load, the onerror handler swaps in the emoji automatically.
+  // Global fallback registry — maps product ID to fallback HTML.
+  // When an <img> fails, onerror calls swapToFallback(id) which looks up the right HTML.
+  // This avoids escaping HTML inside the onerror attribute, which was causing SyntaxErrors.
+  const _imageFallbacks = {};
+
+  function swapToFallback(el, id) {
+    const fb = _imageFallbacks[id] || '<span class="img-fallback">📦</span>';
+    el.outerHTML = fb;
+  }
+
+  function productVisual(p, opts = {}) {
+    const imgUrl = PRODUCT_IMAGES[p.id];
+    if (imgUrl) {
+      // Compute and cache the fallback for this product
+      let fb;
+      if (opts.allowArt) {
+        const art = productArt(p.id);
+        fb = art || `<span class="img-fallback">${p.icon}</span>`;
+      } else {
+        fb = `<span class="img-fallback">${p.icon}</span>`;
+      }
+      _imageFallbacks[p.id] = fb;
+      return `<img class="product-photo" src="${imgUrl}" alt="${p.name}" loading="lazy" onerror="swapToFallback(this, ${p.id})">`;
+    }
+    if (opts.allowArt) {
+      const art = productArt(p.id);
+      if (art) return art;
+    }
+    return `<span class="img-fallback">${p.icon}</span>`;
+  }
+
+  function renderGrid() {
+    const items = activeCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === activeCat);
+    const shown = items.slice(0, visibleCount);
+    const remaining = items.length - shown.length;
+
+    const cards = shown.map(p => {
+      const { retail, save } = retailSavings(p);
+      return `
+      <div class="card">
+        <div class="card-img" style="background: ${cardBg(p.cat)}">
+          ${p.badge ? `<span class="badge ${p.badge}">${p.badge}</span>` : ''}
+          ${productVisual(p)}
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">${p.name}</h3>
+          <div class="card-unit">${p.unit}</div>
+          <div class="card-savings">
+            <span class="card-retail">GH₵ ${retail}</span>
+            <span class="card-save-tag">Save ${save}</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price">GH₵ ${p.price}</div>
+            <button class="add-btn ${cart[p.id] ? 'added' : ''}" onclick="addToCart(${p.id}, this)">
+              ${cart[p.id] ? `✓ ${cart[p.id]}` : '+ Add'}
+            </button>
+          </div>
+        </div>
+      </div>
+    `;}).join('');
+
+    grid.innerHTML = cards;
+
+    // Show or hide the "Show more" button below the grid
+    const moreBtn = document.getElementById('showMoreBtn');
+    if (remaining > 0) {
+      const nextBatch = Math.min(PAGE_SIZE, remaining);
+      moreBtn.style.display = 'inline-flex';
+      moreBtn.innerHTML = `Show ${nextBatch} more <span class="more-count">${shown.length} of ${items.length}</span>`;
+    } else {
+      moreBtn.style.display = 'none';
+    }
+  }
+
+  function showMore() {
+    visibleCount += PAGE_SIZE;
+    renderGrid();
+  }
+
+  // Custom cartoon-style product illustrations for sale items.
+  // Drawn with bold ink outlines + flat fills to match site aesthetic.
+  function productArt(id) {
+    const ink = '#1a1410';
+    switch (id) {
+      // Milo 800g — green tin
+      case 514: return `
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+          <ellipse cx="100" cy="180" rx="55" ry="6" fill="${ink}" opacity="0.15"/>
+          <ellipse cx="100" cy="44" rx="42" ry="8" fill="#e8a838" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="58" y="44" width="84" height="10" fill="#d49520" stroke="${ink}" stroke-width="2.5"/>
+          <path d="M58 54 L58 168 Q58 175 65 175 L135 175 Q142 175 142 168 L142 54 Z"
+                fill="#2d5a3d" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="58" y="78" width="84" height="14" fill="#e8a838" stroke="${ink}" stroke-width="2"/>
+          <text x="100" y="110" text-anchor="middle" font-family="Fraunces, serif" font-size="22" font-weight="900" fill="#fff">MILO</text>
+          <text x="100" y="124" text-anchor="middle" font-family="DM Mono, monospace" font-size="7" letter-spacing="2" fill="#e8a838">ENERGY</text>
+          <path d="M82 132 L82 152 Q82 158 88 158 L106 158 Q112 158 112 152 L112 132 Z" fill="#a86420" stroke="${ink}" stroke-width="2"/>
+          <path d="M112 138 Q120 138 120 144 Q120 150 112 150" fill="none" stroke="${ink}" stroke-width="2"/>
+          <ellipse cx="97" cy="132" rx="15" ry="3" fill="#6b3e10" stroke="${ink}" stroke-width="2"/>
+          <text x="100" y="170" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#fff">800g</text>
+        </svg>`;
+
+      // Ideal Milk 370g — red & white evaporated milk tin
+      case 502: return `
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+          <ellipse cx="100" cy="180" rx="50" ry="5" fill="${ink}" opacity="0.15"/>
+          <ellipse cx="100" cy="42" rx="38" ry="6" fill="#c8c8c8" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="62" y="42" width="76" height="8" fill="#a8a8a8" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="62" y="50" width="76" height="120" fill="#d63d2e" stroke="${ink}" stroke-width="3"/>
+          <rect x="62" y="166" width="76" height="8" fill="#a8a8a8" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="62" y="74" width="76" height="68" fill="#f4ede0" stroke="${ink}" stroke-width="2.5"/>
+          <text x="100" y="96" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="18" font-weight="800" fill="#d63d2e">Ideal</text>
+          <text x="100" y="112" text-anchor="middle" font-family="DM Mono, monospace" font-size="7" letter-spacing="2" fill="${ink}">EVAPORATED</text>
+          <path d="M100 118 Q94 124 94 130 Q94 134 100 134 Q106 134 106 130 Q106 124 100 118 Z" fill="#3a7dc4" stroke="${ink}" stroke-width="1.5"/>
+          <text x="100" y="158" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" font-weight="700" fill="#fff">370g</text>
+        </svg>`;
+
+      // Cerelac Maize Tin — baby cereal
+      case 526: return `
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+          <ellipse cx="100" cy="180" rx="55" ry="6" fill="${ink}" opacity="0.15"/>
+          <rect x="55" y="55" width="90" height="118" rx="4" fill="#e8a838" stroke="${ink}" stroke-width="3"/>
+          <ellipse cx="100" cy="55" rx="45" ry="7" fill="#f4c560" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="55" y="55" width="90" height="3" fill="#d49520"/>
+          <rect x="55" y="82" width="90" height="68" fill="#f4ede0" stroke="${ink}" stroke-width="2.5"/>
+          <text x="100" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="13" font-weight="800" fill="#3a7dc4">Cerelac</text>
+          <circle cx="100" cy="120" r="11" fill="#f5d4b0" stroke="${ink}" stroke-width="2"/>
+          <circle cx="96" cy="118" r="1.3" fill="${ink}"/>
+          <circle cx="104" cy="118" r="1.3" fill="${ink}"/>
+          <path d="M96 124 Q100 127 104 124" stroke="${ink}" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="83" cy="130" rx="4" ry="5" fill="#c8c8c8" stroke="${ink}" stroke-width="1.5"/>
+          <line x1="83" y1="135" x2="80" y2="142" stroke="${ink}" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="68" y="140" width="64" height="14" fill="#d63d2e" stroke="${ink}" stroke-width="2" rx="2"/>
+          <text x="100" y="151" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#fff">MAIZE</text>
+          <text x="100" y="167" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="${ink}">400g</text>
+        </svg>`;
+
+      // Maggi Arome — bottle of liquid seasoning
+      case 533: return `
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+          <ellipse cx="100" cy="180" rx="40" ry="5" fill="${ink}" opacity="0.15"/>
+          <rect x="86" y="22" width="28" height="18" rx="2" fill="#e8a838" stroke="${ink}" stroke-width="2.5"/>
+          <line x1="89" y1="26" x2="111" y2="26" stroke="${ink}" stroke-width="0.8"/>
+          <line x1="89" y1="30" x2="111" y2="30" stroke="${ink}" stroke-width="0.8"/>
+          <line x1="89" y1="34" x2="111" y2="34" stroke="${ink}" stroke-width="0.8"/>
+          <rect x="90" y="40" width="20" height="14" fill="#e8a838" stroke="${ink}" stroke-width="2.5"/>
+          <path d="M70 54 Q66 56 66 62 L66 168 Q66 175 73 175 L127 175 Q134 175 134 168 L134 62 Q134 56 130 54 Z"
+                fill="#8a3219" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="70" y="80" width="60" height="76" fill="#e8a838" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="70" y="80" width="60" height="22" fill="#d63d2e" stroke="${ink}" stroke-width="2"/>
+          <text x="100" y="96" text-anchor="middle" font-family="Fraunces, serif" font-size="13" font-weight="900" fill="#fff">MAGGI</text>
+          <text x="100" y="120" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="12" font-weight="700" fill="${ink}">Arôme</text>
+          <text x="100" y="138" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" letter-spacing="1" fill="${ink}">SEASONING</text>
+          <text x="100" y="151" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" font-weight="700" fill="${ink}">250ml</text>
+        </svg>`;
+
+      // Cowbell Coffee — sachet strip
+      case 600: return `
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+          <ellipse cx="100" cy="182" rx="60" ry="5" fill="${ink}" opacity="0.15"/>
+          <rect x="50" y="58" width="100" height="118" rx="6" fill="#5a3a1a" stroke="${ink}" stroke-width="2.5" transform="rotate(-4 100 100)"/>
+          <rect x="48" y="48" width="104" height="124" rx="6" fill="#8b5a2b" stroke="${ink}" stroke-width="3"/>
+          <line x1="48" y1="80" x2="152" y2="80" stroke="${ink}" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <line x1="48" y1="110" x2="152" y2="110" stroke="${ink}" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <line x1="48" y1="140" x2="152" y2="140" stroke="${ink}" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <rect x="62" y="56" width="76" height="20" fill="#f4ede0" stroke="${ink}" stroke-width="2"/>
+          <text x="100" y="70" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="800" fill="#d63d2e">cowbell</text>
+          <text x="100" y="98" text-anchor="middle" font-family="Fraunces, serif" font-size="13" font-weight="800" fill="#fff">COFFEE</text>
+          <ellipse cx="100" cy="124" rx="9" ry="6" fill="#3a2010" stroke="${ink}" stroke-width="1.5"/>
+          <path d="M91 124 Q100 120 109 124" stroke="#f4ede0" stroke-width="1.2" fill="none"/>
+          <rect x="76" y="148" width="48" height="16" fill="#e8a838" stroke="${ink}" stroke-width="1.5" rx="2"/>
+          <text x="100" y="160" text-anchor="middle" font-family="DM Mono, monospace" font-size="8" font-weight="700" fill="${ink}">12 STRIPS</text>
+        </svg>`;
+
+      // Onga Shrimp Tab — yellow seasoning carton
+      case 629: return `
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+          <ellipse cx="100" cy="180" rx="60" ry="6" fill="${ink}" opacity="0.15"/>
+          <path d="M40 60 L40 170 Q40 175 45 175 L155 175 Q160 175 160 170 L160 60 Z"
+                fill="#e8a838" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M40 60 L100 40 L160 60 Z" fill="#d49520" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="50" y="80" width="100" height="68" fill="#f4ede0" stroke="${ink}" stroke-width="2.5"/>
+          <rect x="50" y="80" width="100" height="22" fill="#d63d2e" stroke="${ink}" stroke-width="2"/>
+          <text x="100" y="97" text-anchor="middle" font-family="Fraunces, serif" font-size="16" font-weight="900" fill="#fff">ONGA</text>
+          <path d="M82 122 Q78 118 80 114 Q84 110 90 112 Q98 114 104 118 Q112 122 116 124 Q120 122 118 128 Q116 132 110 132 Q104 132 96 130 Q88 128 82 124 Z"
+                fill="#e89a6a" stroke="${ink}" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="86" cy="118" r="1.3" fill="${ink}"/>
+          <path d="M82 116 Q78 110 76 106" stroke="${ink}" stroke-width="1.5" fill="none"/>
+          <path d="M84 114 Q82 108 80 104" stroke="${ink}" stroke-width="1.5" fill="none"/>
+          <text x="100" y="142" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="${ink}">SHRIMP TAB</text>
+          <text x="100" y="166" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="${ink}">24pcs</text>
+        </svg>`;
+
+      default: return null;
+    }
+  }
+
+  function cardBg(cat) {
+    const bgs = {
+      foodstuff: 'linear-gradient(135deg, #f4ede0 0%, #ede2cc 100%)',
+      beverages: 'linear-gradient(135deg, #e8f0e8 0%, #d4e6d8 100%)',
+      household: 'linear-gradient(135deg, #fff4e0 0%, #f5e4c0 100%)',
+      baby:      'linear-gradient(135deg, #fbe6ed 0%, #f0d4dc 100%)',
+      snacks:    'linear-gradient(135deg, #fdf0d9 0%, #f5dfb5 100%)',
+    };
+    return bgs[cat] || bgs.foodstuff;
+  }
+
+  // === TABS ===
+  document.getElementById('tabs').addEventListener('click', e => {
+    if (!e.target.classList.contains('tab')) return;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    e.target.classList.add('active');
+    activeCat = e.target.dataset.cat;
+    visibleCount = PAGE_SIZE;  // reset pagination when switching categories
+    renderGrid();
+  });
+
+  // === CART LOGIC ===
+  function addToCart(id, btn) {
+    cart[id] = (cart[id] || 0) + 1;
+    updateCart();
+    btn.classList.add('added');
+    btn.textContent = `✓ ${cart[id]}`;
+    btn.style.transform = 'scale(0.92)';
+    setTimeout(() => btn.style.transform = '', 120);
+  }
+
+  function changeQty(id, delta) {
+    cart[id] += delta;
+    if (cart[id] <= 0) delete cart[id];
+    updateCart();
+    renderGrid();
+    renderHotBuys();
+  }
+
+  function removeItem(id) {
+    delete cart[id];
+    updateCart();
+    renderGrid();
+    renderHotBuys();
+  }
+
+  // Single source of truth for all pricing math
+  function computeTotals() {
+    const ids = Object.keys(cart).map(Number);
+    const subtotal = ids.reduce((s, id) => {
+      const p = PRODUCTS.find(x => x.id === id);
+      return s + p.price * cart[id];
+    }, 0);
+
+    const afterDiscounts = subtotal;
+    // Delivery: free if subtotal=0, free if a free threshold is set and met, else fee
+    let delivery = 0;
+    if (subtotal > 0) {
+      const freeThreshold = selectedDelivery.free;
+      if (freeThreshold > 0 && afterDiscounts >= freeThreshold) {
+        delivery = 0;
+      } else {
+        delivery = selectedDelivery.fee;
+      }
+    }
+    const total = afterDiscounts + delivery;
+    const itemCount = ids.reduce((s, id) => s + cart[id], 0);
+
+    return { ids, subtotal, delivery, total, itemCount };
+  }
+
+  function updateCart() {
+    const t = computeTotals();
+    document.getElementById('cartCount').textContent = t.itemCount;
+
+    const itemsEl = document.getElementById('cartItems');
+    if (t.ids.length === 0) {
+      itemsEl.innerHTML = `
+        <div class="cart-empty">
+          <div class="icon">🧺</div>
+          <p>Your basket is empty.<br>Add some goods to get started.</p>
+        </div>`;
+      document.getElementById('checkoutBtn').disabled = true;
+    } else {
+      itemsEl.innerHTML = t.ids.map(id => {
+        const p = PRODUCTS.find(x => x.id === id);
+        return `
+          <div class="cart-item">
+            <div class="cart-item-img">${p.icon}</div>
+            <div class="cart-item-info">
+              <div class="cart-item-top">
+                <div>
+                  <h4>${p.name}</h4>
+                  <div class="unit">${p.unit}</div>
+                </div>
+                <button class="remove-btn" onclick="removeItem(${id})" aria-label="Remove ${p.name}">✕</button>
+              </div>
+              <div class="cart-item-bottom">
+                <div class="qty">
+                  <button class="qty-btn" onclick="changeQty(${id}, -1)" aria-label="Decrease quantity">−</button>
+                  <span class="qty-num">${cart[id]}</span>
+                  <button class="qty-btn" onclick="changeQty(${id}, 1)" aria-label="Increase quantity">+</button>
+                </div>
+                <div class="cart-item-price">GH₵ ${(p.price * cart[id]).toFixed(0)}</div>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+      document.getElementById('checkoutBtn').disabled = false;
+    }
+
+    document.getElementById('subtotal').textContent = `GH₵ ${t.subtotal.toFixed(2)}`;
+    const deliveryEl = document.getElementById('delivery');
+    if (t.subtotal === 0) {
+      deliveryEl.textContent = 'Choose at checkout';
+    } else if (t.delivery === 0) {
+      deliveryEl.textContent = 'FREE';
+    } else {
+      deliveryEl.textContent = `GH₵ ${t.delivery.toFixed(2)}`;
+    }
+    document.getElementById('total').textContent = `GH₵ ${t.total.toFixed(2)}`;
+  }
+  // === DRAWER ===
+  function openCart() {
+    document.getElementById('cartDrawer').classList.add('open');
+    document.getElementById('cartOverlay').classList.add('open');
+  }
+  function closeCart() {
+    document.getElementById('cartDrawer').classList.remove('open');
+    document.getElementById('cartOverlay').classList.remove('open');
+  }
+
+  // === CHECKOUT ===
+  function openCheckout() {
+    closeCart();
+    renderSummary();
+    document.getElementById('checkoutOverlay').classList.add('open');
+  }
+  function closeCheckout() {
+    document.getElementById('checkoutOverlay').classList.remove('open');
+  }
+
+  document.getElementById('momoOpts').addEventListener('click', e => {
+    const opt = e.target.closest('.momo-opt');
+    if (!opt) return;
+    document.querySelectorAll('.momo-opt').forEach(o => o.classList.remove('selected'));
+    opt.classList.add('selected');
+    selectedNet = opt.dataset.net;
+  });
+
+  document.getElementById('deliveryOpts').addEventListener('click', e => {
+    const opt = e.target.closest('.delivery-opt');
+    if (!opt) return;
+    document.querySelectorAll('.delivery-opt').forEach(o => o.classList.remove('selected'));
+    opt.classList.add('selected');
+    selectedDelivery = {
+      method: opt.dataset.method,
+      name: opt.querySelector('.dopt-name').textContent.trim(),
+      fee: parseFloat(opt.dataset.fee),
+      free: parseFloat(opt.dataset.free),
+    };
+    renderSummary();   // refresh totals shown in checkout
+    updateCart();      // also keep cart drawer in sync if reopened
+  });
+
+  function renderSummary() {
+    const t = computeTotals();
+    let lines = `
+      <div class="summary-line"><span>${t.ids.length} item${t.ids.length>1?'s':''} (${t.itemCount} units)</span><span>GH₵ ${t.subtotal.toFixed(2)}</span></div>
+    `;
+    lines += `<div class="summary-line"><span>Delivery · ${selectedDelivery.name}</span><span>${t.delivery === 0 ? 'FREE' : 'GH₵ ' + t.delivery.toFixed(2)}</span></div>`;
+    lines += `<div class="summary-line total"><span>Pay on delivery</span><span>GH₵ ${t.total.toFixed(2)}</span></div>`;
+    document.getElementById('orderSummary').innerHTML = lines;
+  }
+
+  // Build a clean, formatted WhatsApp order message
+  function buildWhatsAppMessage(orderId, name, phone, address, notes, momo) {
+    const t = computeTotals();
+    const isPickup = selectedDelivery.method === 'pickup';
+
+    // Header
+    let msg = `🛒 *NEW ORDER · ${BUSINESS_NAME}*\n`;
+    msg += `Order #${orderId}\n`;
+    msg += `━━━━━━━━━━━━━━━━━━\n\n`;
+
+    // Customer details
+    msg += `👤 *Customer*\n`;
+    msg += `${name}\n`;
+    msg += `📞 ${phone}\n\n`;
+
+    // Items
+    msg += `🛍️ *Items (${t.itemCount} units)*\n`;
+    t.ids.forEach(id => {
+      const p = PRODUCTS.find(x => x.id === id);
+      const qty = cart[id];
+      const lineTotal = (p.price * qty).toFixed(0);
+      msg += `• ${p.name} (${p.unit})\n`;
+      msg += `   ${qty} × GH₵ ${p.price} = GH₵ ${lineTotal}\n`;
+    });
+    msg += `\n`;
+
+    // Pricing breakdown
+    msg += `💰 *Pricing*\n`;
+    msg += `Subtotal: GH₵ ${t.subtotal.toFixed(2)}\n`;
+    msg += `${selectedDelivery.name}: ${t.delivery === 0 ? 'FREE' : 'GH₵ ' + t.delivery.toFixed(2)}\n`;
+    msg += `*Total: GH₵ ${t.total.toFixed(2)}*\n\n`;
+
+    // Delivery
+    if (isPickup) {
+      msg += `🏪 *Pickup at shop*\n`;
+    } else {
+      msg += `📍 *Delivery to*\n${address}\n`;
+    }
+    if (notes) {
+      msg += `\n📝 *Notes*\n${notes}\n`;
+    }
+    msg += `\n`;
+
+    // Payment
+    msg += `💳 *Payment*\n`;
+    msg += `${selectedNet} MoMo: ${momo}\n`;
+    msg += `(Pay ${isPickup ? 'at pickup' : 'on delivery'})\n\n`;
+
+    msg += `━━━━━━━━━━━━━━━━━━\n`;
+    msg += `Sent from marketpricedelivery.com`;
+
+    return msg;
+  }
+
+  function placeOrder() {
+    const name = document.getElementById('fName').value.trim();
+    const phone = document.getElementById('fPhone').value.trim();
+    const address = document.getElementById('fAddress').value.trim();
+    const notes = document.getElementById('fNotes').value.trim();
+    const momo = document.getElementById('fMomo').value.trim();
+    const isPickup = selectedDelivery.method === 'pickup';
+
+    // Validate
+    if (!name || !phone || !momo) {
+      alert('Please fill in your name, phone, and MoMo number.');
+      return;
+    }
+    if (!isPickup && !address) {
+      alert('Please enter your delivery address (or choose Pickup).');
+      return;
+    }
+    if (Object.keys(cart).length === 0) {
+      alert('Your cart is empty.');
+      return;
+    }
+
+    // Build order record
+    const t = computeTotals();
+    const orderId = nextOrderId();
+    const items = t.ids.map(id => {
+      const p = PRODUCTS.find(x => x.id === id);
+      return {
+        id, name: p.name, unit: p.unit, qty: cart[id],
+        unitPrice: p.price, lineTotal: p.price * cart[id],
+      };
+    });
+
+    const order = {
+      id: orderId,
+      timestamp: new Date().toISOString(),
+      name, phone,
+      address: isPickup ? '' : address,
+      notes,
+      momoNetwork: selectedNet,
+      momoNumber: momo,
+      deliveryMethod: selectedDelivery.method,
+      deliveryName: selectedDelivery.name,
+      deliveryFee: t.delivery,
+      items,
+      itemCount: t.itemCount,
+      subtotal: t.subtotal,
+      total: t.total,
+      status: 'pending',
+    };
+
+    // 1. Save to browser storage
+    const saved = saveOrder(order);
+
+    // 2. Build WhatsApp link
+    const message = buildWhatsAppMessage(orderId, name, phone, address, notes, momo);
+    const encoded = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${BUSINESS_WHATSAPP}?text=${encoded}`;
+    window._lastOrderMessage = message;
+    window._lastOrderId = orderId;
+
+    // 3. Email via Formspree (background)
+    emailOrder(order, message).then(result => {
+      if (result.skipped) {
+        console.log('Formspree not configured.');
+      } else if (!result.ok) {
+        console.warn('Email forwarding failed:', result.error || 'unknown');
+      } else {
+        console.log('Order emailed.');
+      }
+    });
+
+    // 4. Show confirmation screen with REAL anchor link to WhatsApp
+    // (using <a href> avoids the mobile pop-up blocker that blocks window.open)
+    const phoneFormatted = '+' + BUSINESS_WHATSAPP.replace(/(\d{3})(\d{2})(\d{3})(\d{4})/, '$1 $2 $3 $4');
+    document.getElementById('modalTitle').textContent = 'One last step';
+    document.getElementById('modalBody').innerHTML = `
+      <div class="success">
+        <div class="check" style="background: #25D366;">📱</div>
+        <h3>Akwaaba, ${escapeHtml(name.split(' ')[0])}!</h3>
+        <p>Your order is ready. <strong>Tap the button below</strong> to open WhatsApp and send it to us.</p>
+        <div class="order-id">Order #${orderId}</div>
+        ${saved ? `<p style="margin-top: 8px; font-size: 12px; opacity: 0.6;">✓ Saved to your order history</p>` : ''}
+
+        <a href="${whatsappUrl}" target="_blank" rel="noopener" class="pay-btn wa-final">
+          <span style="font-size: 22px;">📱</span>
+          Send order on WhatsApp
+        </a>
+
+        <details class="wa-fallback">
+          <summary>Trouble opening WhatsApp?</summary>
+          <p>Copy your order details and message us at <strong>${phoneFormatted}</strong>:</p>
+          <button class="pay-btn copy-fallback" onclick="copyOrder()" id="copyBtn">
+            📋 Copy order details
+          </button>
+          <a href="https://api.whatsapp.com/send?phone=${BUSINESS_WHATSAPP}&text=${encoded}" target="_blank" rel="noopener" class="pay-btn alt-link">
+            Try alternate WhatsApp link
+          </a>
+        </details>
+
+        <button class="pay-btn done-btn" onclick="resetOrder()">
+          Close
+        </button>
+      </div>
+    `;
+
+    // Clear cart
+    Object.keys(cart).forEach(k => delete cart[k]);
+    updateCart();
+    renderGrid();
+  }
+
+  function copyOrder() {
+    const msg = window._lastOrderMessage || '';
+    if (!msg) return;
+    const btn = document.getElementById('copyBtn');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(msg).then(() => {
+        if (btn) {
+          btn.textContent = '✓ Copied!';
+          btn.style.background = 'var(--forest)';
+          setTimeout(() => {
+            btn.textContent = '📋 Copy order details';
+            btn.style.background = 'var(--ink)';
+          }, 2000);
+        }
+      }).catch(() => fallbackCopy(msg, btn));
+    } else {
+      fallbackCopy(msg, btn);
+    }
+  }
+
+  function fallbackCopy(text, btn) {
+    // Old-school fallback for browsers without clipboard API
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      if (btn) {
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => btn.textContent = '📋 Copy order details', 2000);
+      }
+    } catch (e) {
+      alert('Copy failed. Please screenshot or write down your order details.');
+    }
+    document.body.removeChild(ta);
+  }
+
+  function resetOrder() {
+    closeCheckout();
+    setTimeout(() => {
+      document.getElementById('modalTitle').textContent = 'Checkout';
+      // restore form (lazy: just reload modal body would be heavy; instead reset fields)
+      ['fName','fPhone','fAddress','fMomo'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+    }, 300);
+    location.reload();  // simplest reliable reset
+  }
+
+  // === ADMIN DASHBOARD ===
+  let adminUnlocked = false;
+
+  function openAdmin() {
+    document.getElementById('adminOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (adminUnlocked) {
+      showAdminContent();
+    } else {
+      document.getElementById('adminLogin').style.display = 'flex';
+      document.getElementById('adminContent').style.display = 'none';
+      setTimeout(() => document.getElementById('adminPwd').focus(), 100);
+    }
+  }
+
+  function closeAdmin() {
+    document.getElementById('adminOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    if (location.hash === '#admin-orders') {
+      history.replaceState(null, '', location.pathname);
+    }
+  }
+
+  function checkAdminPwd() {
+    const input = document.getElementById('adminPwd');
+    const errEl = document.getElementById('adminLoginError');
+    if (input.value === ADMIN_PASSWORD) {
+      adminUnlocked = true;
+      input.value = '';
+      errEl.textContent = '';
+      showAdminContent();
+    } else {
+      errEl.textContent = 'Incorrect password';
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  function showAdminContent() {
+    document.getElementById('adminLogin').style.display = 'none';
+    document.getElementById('adminContent').style.display = 'block';
+    renderAdminOrders();
+  }
+
+  function renderAdminOrders() {
+    const orders = loadOrders();
+    const search = (document.getElementById('adminSearch')?.value || '').toLowerCase().trim();
+    const statusFilter = document.getElementById('adminStatus')?.value || 'all';
+
+    // Stats (always reflect ALL orders, not filtered)
+    const totalRevenue = orders
+      .filter(o => o.status !== 'cancelled')
+      .reduce((s, o) => s + (o.total || 0), 0);
+    const today = new Date().toDateString();
+    const todayCount = orders.filter(o => new Date(o.timestamp).toDateString() === today).length;
+    const completedCount = orders.filter(o => o.status !== 'cancelled').length;
+    const avg = completedCount > 0 ? totalRevenue / completedCount : 0;
+
+    document.getElementById('statTotal').textContent = orders.length;
+    document.getElementById('statRevenue').textContent = `GH₵ ${totalRevenue.toFixed(0)}`;
+    document.getElementById('statToday').textContent = todayCount;
+    document.getElementById('statAvg').textContent = `GH₵ ${avg.toFixed(0)}`;
+
+    // Filter
+    let filtered = orders;
+    if (search) {
+      filtered = filtered.filter(o =>
+        o.id.toLowerCase().includes(search) ||
+        o.name.toLowerCase().includes(search) ||
+        (o.phone || '').toLowerCase().includes(search)
+      );
+    }
+    if (statusFilter !== 'all') {
+      filtered = filtered.filter(o => o.status === statusFilter);
+    }
+
+    const listEl = document.getElementById('adminOrdersList');
+    if (filtered.length === 0) {
+      listEl.innerHTML = `
+        <div class="admin-empty">
+          <div class="icon">📭</div>
+          <p>${orders.length === 0 ? 'No orders yet. They will appear here as customers place them.' : 'No orders match your filters.'}</p>
+        </div>`;
+      return;
+    }
+
+    listEl.innerHTML = filtered.map(o => renderOrderCard(o)).join('');
+  }
+
+  function renderOrderCard(o) {
+    const date = new Date(o.timestamp);
+    const timeStr = date.toLocaleString('en-GH', {
+      dateStyle: 'medium', timeStyle: 'short',
+    });
+    const itemRows = o.items.map(i =>
+      `<div class="row"><span>${escapeHtml(i.name)} (${escapeHtml(i.unit)}) × ${i.qty}</span><span>GH₵ ${i.lineTotal.toFixed(0)}</span></div>`
+    ).join('');
+
+    const discountRow = o.totalDiscount > 0
+      ? `<div class="row discount"><span>Discounts${o.promoCode ? ' · ' + o.promoCode : ''}</span><span>−GH₵ ${o.totalDiscount.toFixed(2)}</span></div>`
+      : '';
+    const deliveryRow = o.deliveryFee > 0
+      ? `<div class="row"><span>${escapeHtml(o.deliveryName)}</span><span>GH₵ ${o.deliveryFee.toFixed(2)}</span></div>`
+      : `<div class="row"><span>${escapeHtml(o.deliveryName)}</span><span>FREE</span></div>`;
+
+    // Phone for WhatsApp deep link (strip non-digits, ensure country code)
+    let waNum = (o.phone || '').replace(/\D/g, '');
+    if (waNum.startsWith('0')) waNum = '233' + waNum.slice(1);
+
+    return `
+      <div class="order-card">
+        <div class="order-top">
+          <div class="order-id-block">
+            <span class="order-id-tag">${o.id}</span>
+            <span class="order-time">${timeStr}</span>
+          </div>
+          <select class="status-pill ${o.status}" onchange="changeOrderStatus('${o.id}', this.value)">
+            <option value="pending" ${o.status === 'pending' ? 'selected' : ''}>Pending</option>
+            <option value="confirmed" ${o.status === 'confirmed' ? 'selected' : ''}>Confirmed</option>
+            <option value="delivered" ${o.status === 'delivered' ? 'selected' : ''}>Delivered</option>
+            <option value="cancelled" ${o.status === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+          </select>
+        </div>
+
+        <div class="order-customer">
+          <div class="field-block">
+            <div class="field-label">Customer</div>
+            <div class="field-value">${escapeHtml(o.name)}</div>
+          </div>
+          <div class="field-block">
+            <div class="field-label">Phone</div>
+            <div class="field-value"><a href="tel:${escapeHtml(o.phone)}">${escapeHtml(o.phone)}</a></div>
+          </div>
+          ${o.address ? `
+          <div class="field-block">
+            <div class="field-label">Address</div>
+            <div class="field-value">${escapeHtml(o.address)}</div>
+          </div>` : `
+          <div class="field-block">
+            <div class="field-label">Pickup</div>
+            <div class="field-value">At shop</div>
+          </div>`}
+          <div class="field-block">
+            <div class="field-label">Payment</div>
+            <div class="field-value">${escapeHtml(o.momoNetwork)} · ${escapeHtml(o.momoNumber)}</div>
+          </div>
+        </div>
+
+        ${o.notes ? `<div class="order-notes">📝 ${escapeHtml(o.notes)}</div>` : ''}
+
+        <div class="order-items-table">
+          ${itemRows}
+          <div class="row"><span>Subtotal (${o.itemCount} units)</span><span>GH₵ ${o.subtotal.toFixed(2)}</span></div>
+          ${discountRow}
+          ${deliveryRow}
+          <div class="row total"><span>Total</span><span>GH₵ ${o.total.toFixed(2)}</span></div>
+        </div>
+
+        <div class="order-actions">
+          <a class="wa" href="https://wa.me/${waNum}" target="_blank" rel="noopener">📱 WhatsApp customer</a>
+          <a href="tel:${escapeHtml(o.phone)}">📞 Call</a>
+          <button onclick="copyOrderText('${o.id}')">📋 Copy details</button>
+          <button onclick="deleteOrder('${o.id}')">🗑 Delete</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function escapeHtml(s) {
+    return String(s ?? '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function changeOrderStatus(orderId, newStatus) {
+    const orders = loadOrders();
+    const idx = orders.findIndex(o => o.id === orderId);
+    if (idx === -1) return;
+    orders[idx].status = newStatus;
+    localStorage.setItem(STORAGE_KEYS.orders, JSON.stringify(orders));
+    renderAdminOrders();
+  }
+
+  function deleteOrder(orderId) {
+    if (!confirm(`Delete order ${orderId}? This cannot be undone.`)) return;
+    const orders = loadOrders().filter(o => o.id !== orderId);
+    localStorage.setItem(STORAGE_KEYS.orders, JSON.stringify(orders));
+    renderAdminOrders();
+  }
+
+  function clearAllOrders() {
+    if (!confirm('Delete ALL orders permanently? This cannot be undone.')) return;
+    if (!confirm('Are you absolutely sure? Every order will be erased.')) return;
+    localStorage.removeItem(STORAGE_KEYS.orders);
+    // Note: we don't reset the counter, so next order continues the sequence
+    renderAdminOrders();
+  }
+
+  function copyOrderText(orderId) {
+    const order = loadOrders().find(o => o.id === orderId);
+    if (!order) return;
+    const text = `Order ${order.id}
+Customer: ${order.name} (${order.phone})
+${order.address ? 'Delivery to: ' + order.address : 'Pickup at shop'}
+${order.notes ? 'Notes: ' + order.notes : ''}
+Payment: ${order.momoNetwork} ${order.momoNumber}
+
+Items:
+${order.items.map(i => `  • ${i.name} (${i.unit}) × ${i.qty} = GH₵ ${i.lineTotal}`).join('\n')}
+
+Subtotal: GH₵ ${order.subtotal.toFixed(2)}
+${order.totalDiscount > 0 ? 'Discount: −GH₵ ' + order.totalDiscount.toFixed(2) + '\n' : ''}${order.deliveryName}: ${order.deliveryFee === 0 ? 'FREE' : 'GH₵ ' + order.deliveryFee.toFixed(2)}
+TOTAL: GH₵ ${order.total.toFixed(2)}`;
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(`Order ${orderId} copied to clipboard.`);
+      });
+    }
+  }
+
+  function exportOrdersCSV() {
+    const orders = loadOrders();
+    if (orders.length === 0) {
+      alert('No orders to export.');
+      return;
+    }
+    const headers = ['Order ID', 'Date', 'Status', 'Name', 'Phone', 'Address', 'Notes',
+      'Delivery Method', 'Delivery Fee', 'Payment Network', 'Payment Number',
+      'Items', 'Item Count', 'Subtotal', 'Discount', 'Promo Code', 'Total'];
+    const rows = orders.map(o => [
+      o.id,
+      new Date(o.timestamp).toLocaleString('en-GH'),
+      o.status,
+      o.name, o.phone, o.address || '(pickup)', o.notes || '',
+      o.deliveryName, o.deliveryFee.toFixed(2),
+      o.momoNetwork, o.momoNumber,
+      o.items.map(i => `${i.name} (${i.unit}) x${i.qty}`).join('; '),
+      o.itemCount, o.subtotal.toFixed(2),
+      (o.totalDiscount || 0).toFixed(2),
+      o.promoCode || '',
+      o.total.toFixed(2),
+    ]);
+    const csv = [headers, ...rows]
+      .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))
+      .join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `marketprice-orders-${new Date().toISOString().slice(0,10)}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  // Hash-based routing for admin
+  function checkAdminHash() {
+    if (location.hash === '#admin-orders') openAdmin();
+  }
+  window.addEventListener('hashchange', checkAdminHash);
+
+  // Enter key on admin password (script is at end of body, DOM is ready)
+  const _pwdEl = document.getElementById('adminPwd');
+  if (_pwdEl) {
+    _pwdEl.addEventListener('keydown', e => {
+      if (e.key === 'Enter') checkAdminPwd();
+    });
+  }
+
+  // === MOBILE MENU ===
+  function toggleMobileMenu() {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mobileNav');
+    const open = toggle.classList.toggle('open');
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  function closeMobileMenu() {
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mobileNav');
+    toggle.classList.remove('open');
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-label', 'Open menu');
+  }
+  // Close menu when tapping outside
+  document.addEventListener('click', e => {
+    const nav = document.getElementById('mobileNav');
+    const toggle = document.getElementById('menuToggle');
+    if (!nav || !toggle) return;
+    if (nav.classList.contains('open') &&
+        !nav.contains(e.target) &&
+        !toggle.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  // === INIT ===
+  renderTabs();
+  renderGrid();
+  renderHotBuys();
+  updateCart();
+  checkAdminHash();
+</script>
+
+
+<div id="claude-static-indicator-container" style="position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); align-items: center; justify-content: center; padding: 6px 6px 6px 16px; background: rgb(250, 249, 245); border: 0.5px solid rgba(31, 30, 29, 0.3); border-radius: 14px; box-shadow: rgba(0, 0, 0, 0.15) 0px 40px 80px 0px; z-index: 2147483647; pointer-events: none; white-space: nowrap; user-select: none; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif;">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; flex-shrink: 0; margin-right: 8px;">
+        <path d="M3.13946 10.6399L6.28757 8.87462L6.37405 8.73821L6.28757 8.6339H6.13189L5.60432 8.6018L3.80541 8.55366L2.24865 8.48947L0.735135 8.40923H0.492973L0.354595 8.32899L0.181622 8.1685L0.0345946 8.01605L0 7.85557L0.0345946 7.62287L0.138378 7.44634L0.224865 7.40622H0.354595L0.812973 7.44634L1.82486 7.51856L3.34703 7.62287L4.44541 7.68706L6.08 7.85557H6.33946L6.37405 7.75125L6.28757 7.68706L6.21838 7.62287L4.64432 6.55567L2.94054 5.4323L2.04973 4.78235L1.57405 4.45336L1.33189 4.14845L1.22811 3.92377L1.17622 3.69107L1.22811 3.47442L1.33189 3.28185L1.46162 3.13741L1.66054 2.99298H1.87676L2.24865 3.0331L2.39568 3.07322L2.99243 3.53059L4.26378 4.51755L5.92432 5.73721L6.16649 5.93781H6.27892V5.82548L6.16649 5.64092L5.26703 4.01204L4.30703 2.35105L3.87459 1.66098L3.76216 1.25176C3.7391 1.16082 3.69297 0.977332 3.69297 0.970913V0.762287L3.77946 0.505517L3.93513 0.240722L4.18595 0.0882648L4.4627 0H4.67892L4.83459 0.0240722L5.12865 0.0882648L5.4054 0.328987L5.82054 1.27583L6.48649 2.76028L7.52432 4.78235L7.82703 5.38415L7.99135 5.93781L8.05189 6.10632H8.15567V6.01003L8.24216 4.87061L8.39784 3.47442L8.55351 1.67703L8.6054 1.17151L8.85622 0.561685L8.9773 0.417252L9.21946 0.232698H9.35784L9.74703 0.417252L9.97189 0.665998L10.067 0.874624L10.0238 1.17151L9.83351 2.40722L9.46162 4.34102L9.21946 5.64092H9.35784L9.52216 5.47242L10.1795 4.60582L11.2778 3.22568L11.7622 2.68004L12.333 2.07823L12.6962 1.78937L13.0162 1.67703L13.3881 1.78937L13.7168 2.06219L13.8897 2.54363V2.76028L13.6649 3.32197L12.9557 4.22066L12.3676 4.98295L12.0043 5.56871L11.0011 7.02106V7.08526H11.1741L13.0768 6.67603L14.1059 6.49147L15.3341 6.28285L15.5762 6.34704L15.8876 6.53962L15.9481 6.80441L15.8876 7.12538L15.7319 7.34203L14.4173 7.66299L12.8778 7.97593L10.5854 8.51559C10.5705 8.51909 10.56 8.53236 10.56 8.54764C10.56 8.56468 10.573 8.57891 10.59 8.58044L11.6238 8.67402L12.0649 8.69809H13.1459L15.1611 8.85055L15.6886 9.19559L15.9481 9.39619L16 9.62086L15.9481 9.94985L15.8443 10.1023L15.4119 10.3029L15.1351 10.3591L14.0454 10.1023L11.4941 9.49248L10.6205 9.27583H10.4995V9.34804L11.2259 10.0622L12.5665 11.2658L14.2357 12.8225L14.3222 13.0953V13.2076L14.1059 13.5125L13.9243 13.5206L13.8811 13.4804L12.4108 12.3731L12.2984 12.325L11.84 11.8756L10.56 10.7924H10.4735V10.9047L10.7676 11.338L12.333 13.6891L12.4108 14.4112L12.2984 14.6439L11.8919 14.7884L11.667 14.7563L11.4508 14.7081L11.2605 14.5396L10.5254 13.4162L9.5827 11.9719L8.82162 10.672H8.79342C8.76039 10.672 8.73278 10.6972 8.7297 10.73L8.27676 15.5667L8.06919 15.8154L7.6454 16H7.58486L7.17838 15.6951L6.96216 15.1976L7.17838 14.2106L7.43784 12.9268L7.6454 11.9077L7.83567 10.6399L7.95187 10.2164C7.9548 10.2057 7.95069 10.1944 7.94161 10.1881C7.91157 10.1672 7.87034 10.1741 7.84878 10.2037L6.89297 11.5145L5.44 13.4804L4.28973 14.7081L4.01297 14.8205H3.80541L3.5373 14.5717V14.4514L3.58054 14.1304L3.84865 13.7372L5.44 11.7151L6.4 10.4554L7.01872 9.73222C7.04511 9.70139 7.04245 9.65523 7.0127 9.62763C7.00333 9.61894 6.98925 9.61773 6.97854 9.62471L2.75027 12.3811L1.99784 12.4774L1.66919 12.1725L1.71243 11.675L1.86811 11.5145L3.13946 10.6399Z" fill="#D97757"></path>
+      </svg>
+      <span style="vertical-align: middle; color: #141413; font-size: 14px; display: inline-block;">Claude is active in this tab group</span>
+      <div style="display: inline-block; width: 0.5px; height: 32px; background: rgba(31, 30, 29, 0.15); margin: 0 8px; vertical-align: middle;"></div>
+      <button id="claude-static-chat-button" style="position: relative; display: inline-flex; align-items: center; justify-content: center; padding: 6px; background: transparent; border: none; cursor: pointer; pointer-events: auto; vertical-align: middle; width: 32px; height: 32px; border-radius: 8px; transition: background 0.2s;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="#141413" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; display: block;">
+          <path d="M10 2.5C14.1421 2.5 17.5 5.85786 17.5 10C17.5 14.1421 14.1421 17.5 10 17.5H3C2.79779 17.5 2.61549 17.3782 2.53809 17.1914C2.4607 17.0046 2.50349 16.7895 2.64648 16.6465L4.35547 14.9365C3.20124 13.6175 2.5 11.8906 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5ZM10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 11.7952 4.22659 13.4199 5.40332 14.5967L5.46582 14.6729C5.52017 14.7544 5.5498 14.8508 5.5498 14.9502C5.5498 15.0828 5.49709 15.2099 5.40332 15.3037L4.20703 16.5H10C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM13.29 9.30371C13.3986 9.05001 13.6925 8.93174 13.9463 9.04004C14.2 9.14863 14.3183 9.44253 14.21 9.69629C13.8506 10.536 13.1645 11.25 12.25 11.25C11.6372 11.25 11.128 10.9289 10.75 10.4648C10.372 10.9289 9.86276 11.25 9.25 11.25C8.63724 11.25 8.12801 10.9289 7.75 10.4648C7.37198 10.9289 6.86276 11.25 6.25 11.25C5.97386 11.25 5.75 11.0261 5.75 10.75C5.75 10.4739 5.97386 10.25 6.25 10.25C6.58764 10.25 7.00448 9.97056 7.29004 9.30371L7.32422 9.2373C7.41431 9.09121 7.5749 9 7.75 9C7.9501 9 8.13123 9.11975 8.20996 9.30371L8.32227 9.53516C8.59804 10.0359 8.95442 10.25 9.25 10.25C9.58764 10.25 10.0045 9.97056 10.29 9.30371L10.3242 9.2373C10.4143 9.09121 10.5749 9 10.75 9C10.9501 9 11.1312 9.11975 11.21 9.30371L11.3223 9.53516C11.598 10.0359 11.9544 10.25 12.25 10.25C12.5876 10.25 13.0045 9.97056 13.29 9.30371Z"></path>
+        </svg>
+        <span id="claude-static-chat-tooltip" style="position: absolute; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); padding: 6px 12px; background: #30302E; color: #FAF9F5; border-radius: 6px; font-size: 12px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">Open chat</span>
+      </button>
+      <button id="claude-static-close-button" style="position: relative; display: inline-flex; align-items: center; justify-content: center; padding: 6px; background: transparent; border: none; cursor: pointer; pointer-events: auto; vertical-align: middle; width: 32px; height: 32px; margin-left: 4px; border-radius: 8px; transition: background 0.2s;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; display: block;">
+          <path d="M15.1464 4.14642C15.3417 3.95121 15.6582 3.95118 15.8534 4.14642C16.0486 4.34168 16.0486 4.65822 15.8534 4.85346L10.7069 9.99997L15.8534 15.1465C16.0486 15.3417 16.0486 15.6583 15.8534 15.8535C15.6826 16.0244 15.4186 16.0461 15.2245 15.918L15.1464 15.8535L9.99989 10.707L4.85338 15.8535C4.65813 16.0486 4.34155 16.0486 4.14634 15.8535C3.95115 15.6583 3.95129 15.3418 4.14634 15.1465L9.29286 9.99997L4.14634 4.85346C3.95129 4.65818 3.95115 4.34162 4.14634 4.14642C4.34154 3.95128 4.65812 3.95138 4.85338 4.14642L9.99989 9.29294L15.1464 4.14642Z" fill="#141413"></path>
+        </svg>
+        <span id="claude-static-close-tooltip" style="position: absolute; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); padding: 6px 12px; background: #30302E; color: #FAF9F5; border-radius: 6px; font-size: 12px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">Dismiss</span>
+      </button>
+    </div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
