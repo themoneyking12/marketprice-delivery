@@ -10,6 +10,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GH">
 <meta property="og:site_name" content="Marketprice Delivery">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%231a1410%22%2F%3E%3Crect%20x%3D%226%22%20y%3D%226%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%226%22%20fill%3D%22%23c44d2e%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2214%22%20fill%3D%22%23f4ede0%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2222%22%20font-weight%3D%22700%22%20fill%3D%22%231a1410%22%3EM%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20180%20180%22%3E%3Crect%20width%3D%22180%22%20height%3D%22180%22%20rx%3D%2236%22%20fill%3D%22%23c44d2e%22%2F%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%2290%22%20r%3D%2246%22%20fill%3D%22%23f4ede0%22%2F%3E%3Ctext%20x%3D%2290%22%20y%3D%22108%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2264%22%20font-weight%3D%22700%22%20fill%3D%22%231a1410%22%3EM%3C%2Ftext%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&amp;family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
@@ -2263,6 +2265,202 @@
     .order-customer { flex-direction: column; gap: 10px; }
     .stat-value { font-size: 28px; }
   }
+
+  /* ============================================================ */
+  /* === MOBILE IMPROVEMENTS (added 2026) — overrides above ==== */
+  /* ============================================================ */
+  @media (max-width: 900px) {
+    /* No horizontal scroll on small screens */
+    html, body { overflow-x: hidden; }
+    body { font-size: 16px; }
+
+    /* Top marquee: slow it down, smaller text, no overflow */
+    .ribbon { font-size: 11px; padding: 8px 0; }
+    .ribbon-track span { padding: 0 16px; }
+
+    /* Header: tight, sticky, with clear burger */
+    header {
+      position: sticky; top: 0; z-index: 90;
+      background: var(--paper);
+      box-shadow: 0 2px 0 var(--ink);
+      padding: 10px 14px !important;
+      gap: 8px;
+    }
+    header nav { display: none !important; }
+    .menu-toggle {
+      display: flex !important;
+      flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px;
+      width: 44px; height: 44px;
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 0;
+      order: 3;
+    }
+    .menu-toggle span {
+      display: block; width: 22px; height: 2px;
+      background: var(--ink); border-radius: 2px;
+      transition: transform .25s, opacity .25s;
+    }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Cart button: compact pill, but tappable */
+    .cart-btn {
+      padding: 0 14px !important;
+      height: 44px;
+      font-size: 13px !important;
+      border-radius: 8px;
+      order: 2;
+      white-space: nowrap;
+    }
+
+    /* Mobile slide-down drawer */
+    .mobile-nav {
+      display: block !important;
+      position: fixed; top: 64px; left: 0; right: 0;
+      background: var(--paper);
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease;
+      z-index: 80;
+    }
+    .mobile-nav.open { max-height: 80vh; }
+    .mobile-nav a {
+      display: block;
+      padding: 16px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,20,16,0.08);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:active { background: rgba(196,77,46,0.08); }
+
+    /* Hero: more breathable, stack cleanly */
+    .hero { padding: 28px 16px 36px !important; }
+    .hero-grid { gap: 24px !important; }
+    .hero h1 { font-size: clamp(36px, 10vw, 56px) !important; line-height: 1.05; }
+    .hero p { font-size: 15px; line-height: 1.55; }
+
+    /* Hero featured cards: 2 columns on phones, smaller */
+    .hero-art { display: grid !important; grid-template-columns: 1fr 1fr; gap: 12px !important; }
+    .hp-card { padding: 10px !important; }
+    .hp-img { height: 88px !important; margin: -10px -10px 8px !important; }
+    .hp-meta h3 { font-size: 13px !important; line-height: 1.2; }
+    .hp-unit { font-size: 9px !important; }
+    .hp-retail { font-size: 11px; }
+    .hp-save-tag { font-size: 9px; padding: 2px 6px; }
+    .hp-price { font-size: 17px !important; }
+    .hp-arrow { font-size: 18px; }
+
+    /* Hero CTA row: stack tappable */
+    .hero-actions { gap: 8px; }
+    .hero-actions .btn-primary { min-height: 50px; font-size: 13px !important; padding: 0 16px !important; }
+    .hero-actions .btn-whatsapp,
+    .hero-actions .btn-call { width: 50px !important; height: 50px !important; flex: 0 0 50px !important; }
+
+    /* Hot buys / shop sections: tighter padding + 2-col grid */
+    .hot-section { padding: 36px 14px !important; }
+    .hot-strip { display: grid !important; grid-template-columns: 1fr 1fr; gap: 12px; overflow-x: visible !important; }
+    .hot-strip > * { min-width: 0 !important; flex: 0 1 auto !important; }
+
+    .shop-section { padding: 36px 14px !important; }
+    .grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+
+    /* Cards: bigger tappable Add button + readable price */
+    .card-img { height: 130px !important; }
+    .card-body { padding: 12px !important; }
+    .card-name { font-size: 14px !important; line-height: 1.25; min-height: 36px; }
+    .card-unit { font-size: 10px !important; margin-bottom: 8px; }
+    .card-savings { gap: 6px; flex-wrap: wrap; }
+    .card-retail { font-size: 11px !important; }
+    .card-save-tag { font-size: 9px !important; padding: 2px 6px !important; }
+    .card-price { font-size: 17px !important; }
+    .card-bottom { gap: 8px !important; align-items: center; }
+    .add-btn { padding: 10px 12px !important; font-size: 11px !important; min-height: 40px; border-radius: 6px; }
+
+    /* Tabs: scroll horizontally, snap, comfortable size */
+    .tabs {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory;
+      gap: 8px !important;
+      padding: 4px 14px 12px !important;
+      margin: 0 -14px 16px !important;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      flex-shrink: 0 !important;
+      scroll-snap-align: start;
+      padding: 10px 14px !important;
+      font-size: 12px !important;
+      min-height: 40px;
+      white-space: nowrap;
+    }
+
+    /* Pager: bigger tap targets */
+    .pager-wrap { gap: 10px !important; margin-top: 24px !important; }
+    .pager-btn { min-height: 44px; padding: 10px 16px !important; font-size: 14px !important; min-width: 88px; }
+    .pager-info { font-size: 14px !important; min-width: auto !important; flex-basis: 100%; order: -1; text-align: center; }
+
+    /* Section titles a touch smaller */
+    .section-title { font-size: 32px !important; line-height: 1.05; }
+    .section-sub { font-size: 14px !important; }
+
+    /* Free delivery badge */
+    .free-delivery-badge { padding: 10px 14px; font-size: 13px; }
+
+    /* Floating WhatsApp: stay above bottom CTAs */
+    .floating-wa { bottom: 84px !important; right: 14px !important; }
+
+    /* Cart drawer: full screen */
+    .cart-drawer { width: 100% !important; max-width: 100% !important; }
+
+    /* How it works */
+    .how { padding: 48px 16px !important; }
+    .how h2 { font-size: 36px !important; }
+    .steps { grid-template-columns: 1fr !important; gap: 18px !important; }
+
+    /* Footer */
+    footer { padding: 36px 18px 24px !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 22px !important; }
+  }
+
+  /* Phones (≤ 480px): tighten further but keep 2-col grid */
+  @media (max-width: 480px) {
+    .hero h1 { font-size: clamp(34px, 11vw, 48px) !important; }
+    .hero p { font-size: 14px; }
+    .section-title { font-size: 28px !important; }
+    .free-delivery-badge { font-size: 12px; }
+    .ribbon { font-size: 10px; }
+    .hp-img { height: 78px !important; }
+    .hp-icon { font-size: 36px !important; }
+    .card-img { height: 112px !important; }
+    .card-name { font-size: 13px !important; min-height: 32px; }
+    .card-price { font-size: 16px !important; }
+  }
+
+  /* Very small phones (≤ 360px): keep 2-col, smaller text */
+  @media (max-width: 360px) {
+    .grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+    .hot-strip { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+    .card-body { padding: 10px !important; }
+    .add-btn { padding: 8px 10px !important; font-size: 10px !important; }
+    .pager-btn { padding: 9px 12px !important; min-width: 80px; font-size: 13px !important; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+  }
+
 </style>
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
 <body data-new-gr-c-s-check-loaded="14.1286.0" data-gr-ext-installed="">
