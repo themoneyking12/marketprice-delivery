@@ -615,7 +615,7 @@
     align-items: center;
     gap: 3px;
   }
-  .hot-img {
+  .hot-img { position: relative;
     height: 130px;
     border-bottom: 2px solid var(--ink);
     display: flex;
@@ -2670,6 +2670,21 @@
   @media (max-width: 480px) {
     .qty-badge { min-width: 34px; height: 34px; font-size: 12px; }
   }
+
+  .hot-perunit {
+    display: inline-flex;
+    align-items: center;
+    background: var(--terracotta-deep);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    line-height: 1;
+    border: 1.5px solid var(--terracotta-deep);
+  }
 </style>
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
 <body data-new-gr-c-s-check-loaded="14.1286.0" data-gr-ext-installed="">
@@ -3937,6 +3952,19 @@ function parseQtyFromUnit(unit) {
       + '<span class="card-perunit">GH\u20b5 ' + formatted + ' / ' + noun + '</span>'
       + '</div>';
   }
+  function perUnitChipHot(p, retail) {
+    const q = parseQtyFromUnit(p.unit);
+    if (!q || q < 2) {
+      return '<div class="hot-savings"><span class="hot-retail">GH\u20b5 ' + retail + '</span></div>';
+    }
+    const noun = unitNoun(p.unit);
+    const per = (p.price / q);
+    const formatted = per >= 100 ? Math.round(per) : (Math.round(per*100)/100).toFixed(2).replace(/\.?0+$/, '');
+    return '<div class="hot-savings">'
+      + '<span class="hot-retail">GH\u20b5 ' + retail + '</span>'
+      + '<span class="hot-perunit">GH\u20b5 ' + formatted + ' / ' + noun + '</span>'
+      + '</div>';
+  }
     function retailSavings(p) {
     const retail = Math.round(p.price * (1 + RETAIL_MARKUP));
     const save = retail - p.price;
@@ -3959,10 +3987,7 @@ function parseQtyFromUnit(unit) {
         <div class="hot-body">
           <h3 class="hot-name">${p.name}</h3>
           <div class="hot-unit">${p.unit}</div>
-          <div class="hot-savings">
-            <span class="hot-retail">GH₵ ${retail}</span>
-            <span class="hot-save-tag">Save ${save}</span>
-          </div>
+          ${perUnitChipHot(p, retail)}
           <div class="hot-foot">
             <span class="hot-price">GH₵ ${p.price}</span>
             <button class="hot-add-btn ${cart[p.id] ? 'added' : ''}" onclick="addToCart(${p.id}, this)">
@@ -4933,4 +4958,3 @@ TOTAL: GH₵ ${order.total.toFixed(2)}`;
         <span id="claude-static-close-tooltip" style="position: absolute; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); padding: 6px 12px; background: #30302E; color: #FAF9F5; border-radius: 6px; font-size: 12px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">Dismiss</span>
       </button>
     </div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
- 
