@@ -2477,7 +2477,7 @@
 
     /* Compact cart button: show count chip only with cart icon */
     .cart-btn { padding: 0 10px !important; font-size: 0 !important; min-height: 40px; min-width: 44px; gap: 4px !important; box-shadow: 3px 3px 0 var(--terracotta); }
-    .cart-btn::before { content: "🛒"; font-size: 18px; line-height: 1; }
+    .cart-btn::before { content: "Cart"; font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: 0.08em; line-height: 1; }
     .cart-btn .cart-count { font-size: 12px !important; }
 
     .menu-toggle { width: 42px !important; height: 40px !important; flex: 0 0 42px; }
@@ -2544,6 +2544,73 @@
   }
 
 
+
+  /* === Checkout redesign (no emojis) === */
+  .modal-overlay { backdrop-filter: blur(4px); background: rgba(26,20,16,0.55); }
+  .modal { width: 96%; max-width: 560px; border-radius: 0; padding: 0; max-height: 92vh; display: flex; flex-direction: column; }
+  .modal-header { padding: 22px 28px 18px; border-bottom: 2px solid var(--ink); display: flex; align-items: center; justify-content: space-between; }
+  .modal-header h2 { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; margin: 0; }
+  .modal-header .close-btn { background: var(--paper); border: 1.5px solid var(--ink); width: 38px; height: 38px; display:flex; align-items:center; justify-content:center; cursor: pointer; font-size: 16px; line-height: 1; }
+  .modal-header .close-btn:hover { background: var(--ink); color: var(--paper); }
+  .modal-body { padding: 22px 28px 28px; overflow-y: auto; }
+
+  .modal-body .field { margin-bottom: 18px; }
+  .modal-body .field > label { display: block; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); opacity: 0.78; margin-bottom: 8px; }
+  .modal-body .field input, .modal-body .field textarea { width: 100%; padding: 14px 14px; border: 2px solid var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.4; color: var(--ink); transition: box-shadow 0.15s, transform 0.15s; }
+  .modal-body .field input:focus, .modal-body .field textarea:focus { outline: none; box-shadow: 4px 4px 0 var(--terracotta); }
+  .modal-body .field textarea { resize: vertical; min-height: 70px; }
+
+  .delivery-options { display: grid; gap: 10px; }
+  .delivery-opt { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 16px; border: 2px solid var(--ink); background: var(--paper); cursor: pointer; transition: 0.15s; position: relative; }
+  .delivery-opt::before { content: ""; width: 18px; height: 18px; border: 2px solid var(--ink); border-radius: 50%; flex-shrink: 0; background: var(--paper); transition: 0.15s; }
+  .delivery-opt.selected { background: var(--paper-warm); box-shadow: 4px 4px 0 var(--ink); }
+  .delivery-opt.selected::before { background: var(--terracotta); box-shadow: inset 0 0 0 3px var(--paper); }
+  .dopt-main { flex: 1; min-width: 0; }
+  .dopt-name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; line-height: 1.2; margin-bottom: 3px; color: var(--ink); }
+  .dopt-desc { font-size: 12px; opacity: 0.7; line-height: 1.4; }
+  .dopt-price { text-align: right; flex-shrink: 0; }
+  .dopt-fee { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 700; color: var(--terracotta); letter-spacing: 0.02em; }
+  .dopt-free { font-size: 10px; opacity: 0.6; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; }
+
+  .momo-options { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .momo-opt { padding: 14px 10px; border: 2px solid var(--ink); background: var(--paper); cursor: pointer; text-align: center; transition: 0.15s; }
+  .momo-opt.selected { background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 var(--terracotta); }
+  .momo-opt .name { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; line-height: 1.1; }
+  .momo-opt .net { font-family: 'DM Mono', monospace; font-size: 10px; opacity: 0.7; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+  .momo-opt.selected .net { opacity: 0.85; }
+
+  .order-summary { background: var(--paper-warm); border: 2px solid var(--ink); padding: 16px 18px; margin: 8px 0 18px; }
+  .order-summary .summary-line { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; font-family: 'DM Sans', sans-serif; font-size: 14px; }
+  .order-summary .summary-line:not(:last-child) { border-bottom: 1px dashed rgba(26,20,16,0.18); }
+  .order-summary .summary-line.total { padding-top: 10px; margin-top: 4px; border-top: 2px solid var(--ink); border-bottom: none; }
+  .order-summary .summary-line.total span:first-child { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; }
+  .order-summary .summary-line.total span:last-child { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 800; color: var(--terracotta); }
+
+  .wa-note { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; background: rgba(196,77,46,0.08); border-left: 3px solid var(--terracotta); font-size: 13px; line-height: 1.5; margin-bottom: 16px; color: var(--ink); }
+  .wa-note .wa-icon, .wa-icon, .wa-logo { display: none !important; }
+
+  .pay-btn, .pay-btn.wa-btn { width: 100%; padding: 16px 20px; background: var(--ink); color: var(--paper); border: 2px solid var(--ink); font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; box-shadow: 4px 4px 0 var(--terracotta); transition: 0.15s; min-height: 56px; }
+  .pay-btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--terracotta); }
+  .pay-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--terracotta); }
+
+  /* Cart drawer thumbnail uses real image */
+  .cart-item-img { background: var(--paper-warm); overflow: hidden; }
+  .cart-item-img img.product-photo { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+  .cart-item-img .img-fallback { font-size: 22px; }
+
+  @media (max-width: 540px) {
+    .modal-header { padding: 16px 18px 14px; }
+    .modal-header h2 { font-size: 22px; }
+    .modal-body { padding: 16px 18px 24px; }
+    .modal-body .field input, .modal-body .field textarea { padding: 12px 12px; font-size: 16px; }
+    .delivery-opt { padding: 12px 12px; }
+    .dopt-name { font-size: 14px; }
+    .dopt-fee { font-size: 13px; }
+    .momo-options { gap: 8px; }
+    .momo-opt { padding: 12px 6px; }
+    .momo-opt .name { font-size: 14px; }
+    .pay-btn { font-size: 12px; padding: 14px 16px; }
+  }
 </style>
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
 <body data-new-gr-c-s-check-loaded="14.1286.0" data-gr-ext-installed="">
@@ -2572,7 +2639,7 @@
     </span>
   </a>
   <nav>
-    <a href="#hotbuys">🔥 Hot</a>
+    <a href="#hotbuys">Hot buys</a>
     <a href="#shop">Shop</a>
     <a href="#how">How it works</a>
     <a href="#contact">Contact</a>
@@ -2587,7 +2654,7 @@
 
 <!-- Mobile slide-down nav -->
 <nav class="mobile-nav" id="mobileNav">
-  <a href="#hotbuys" onclick="closeMobileMenu()">🔥 Hot buys</a>
+  <a href="#hotbuys" onclick="closeMobileMenu()">Hot buys</a>
   <a href="#shop" onclick="closeMobileMenu()">Shop</a>
   <a href="#how" onclick="closeMobileMenu()">How it works</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
@@ -2663,7 +2730,7 @@
   <div class="hot-inner">
     <div class="hot-header">
       <div>
-        <div class="hot-eyebrow">🔥 Hot this week</div>
+        <div class="hot-eyebrow">Hot this week</div>
         <h2 class="hot-title">Hot <em>buys.</em></h2>
         <p class="hot-sub">Top-selling cartons our customers reorder most. Same wholesale prices, ready to ship.</p>
       </div>
@@ -3062,7 +3129,7 @@
         <div class="delivery-options" id="deliveryOpts">
           <div class="delivery-opt selected" data-method="standard" data-fee="50" data-free="2000">
             <div class="dopt-main">
-              <div class="dopt-name">🛵 Accra Standard</div>
+              <div class="dopt-name">Accra Standard</div>
               <div class="dopt-desc">Same-day or next-day · within Accra</div>
             </div>
             <div class="dopt-price">
@@ -3072,7 +3139,7 @@
           </div>
           <div class="delivery-opt" data-method="express" data-fee="60" data-free="0">
             <div class="dopt-main">
-              <div class="dopt-name">⚡ Accra Express</div>
+              <div class="dopt-name">Accra Express</div>
               <div class="dopt-desc">Within 2 hours · within Accra</div>
             </div>
             <div class="dopt-price">
@@ -3082,7 +3149,7 @@
           </div>
           <div class="delivery-opt" data-method="aburi" data-fee="80" data-free="2000">
             <div class="dopt-main">
-              <div class="dopt-name">🌄 Aburi &amp; nearby</div>
+              <div class="dopt-name">Aburi &amp; nearby</div>
               <div class="dopt-desc">Next-day delivery to Aburi area</div>
             </div>
             <div class="dopt-price">
@@ -3092,7 +3159,7 @@
           </div>
           <div class="delivery-opt" data-method="koforidua" data-fee="120" data-free="2000">
             <div class="dopt-main">
-              <div class="dopt-name">🚚 Koforidua</div>
+              <div class="dopt-name">Koforidua</div>
               <div class="dopt-desc">1–2 day delivery to Koforidua</div>
             </div>
             <div class="dopt-price">
@@ -3102,7 +3169,7 @@
           </div>
           <div class="delivery-opt" data-method="pickup" data-fee="0" data-free="0">
             <div class="dopt-main">
-              <div class="dopt-name">🏪 Pickup at our shop</div>
+              <div class="dopt-name">Pickup at our shop</div>
               <div class="dopt-desc">Collect yourself · no delivery fee</div>
             </div>
             <div class="dopt-price">
@@ -3128,12 +3195,12 @@
       <div class="order-summary" id="orderSummary"></div>
 
       <div class="wa-note">
-        <span class="wa-icon">📱</span>
+        <span class="wa-icon"></span>
         <span>You'll send your order to us via WhatsApp on the next screen — just hit Send when it opens.</span>
       </div>
 
       <button class="pay-btn wa-btn" onclick="placeOrder()">
-        <span class="wa-logo">📱</span>
+        <span class="wa-logo"></span>
         Continue
       </button>
     </div>
@@ -3707,6 +3774,7 @@
   const _MEL = 'https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/';
   const PRODUCT_IMAGES = {
     1002: _MEL+'i/d/ideal_original_370g.jpg',
+    1001: _MEL+'i/d/ideal_original_370g.jpg',
     1004: _MEL+'n/i/nido_update_1.png',
     1005: _MEL+'n/i/nido_essentia_obaatanpa_23g_promo_laminate_a1n1_engh.jpg',
     1006: _MEL+'n/u/nutripak_14g.jpg',
@@ -3795,7 +3863,7 @@
       const { retail, save } = retailSavings(p);
       return `
       <div class="hot-card">
-        <span class="hot-badge">🔥 Hot</span>
+        <span class="hot-badge">Hot</span>
         <div class="hot-img" style="background: ${cardBg(p.cat)}">${productVisual(p)}</div>
         <div class="hot-body">
           <h3 class="hot-name">${p.name}</h3>
@@ -4144,7 +4212,7 @@
         const p = PRODUCTS.find(x => x.id === id);
         return `
           <div class="cart-item">
-            <div class="cart-item-img">${p.icon}</div>
+            <div class="cart-item-img">${productVisual(p)}</div>
             <div class="cart-item-info">
               <div class="cart-item-top">
                 <div>
