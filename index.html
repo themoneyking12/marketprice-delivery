@@ -3638,7 +3638,7 @@
     if (nextBtn) nextBtn.style.opacity = nextBtn.disabled ? '0.4' : '1';
     if (prevBtn) prevBtn.style.cursor = prevBtn.disabled ? 'not-allowed' : 'pointer';
     if (nextBtn) nextBtn.style.cursor = nextBtn.disabled ? 'not-allowed' : 'pointer';
-
+  }
   function nextPage() {
     const items = activeCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === activeCat);
     const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
