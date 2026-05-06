@@ -2895,7 +2895,6 @@
       <h3>Milo 800g</h3>
       <p class="hp-unit">12pcs carton</p>
       <div class="hp-savings">
-        <span class="hp-retail">GH₵ 891</span>
         <span class="hp-perunit">GH₵ 64.58 / pc</span>
       </div>
     </div>
@@ -2911,7 +2910,6 @@
       <h3>Ideal Milk 370g</h3>
       <p class="hp-unit">24pcs carton</p>
       <div class="hp-savings">
-        <span class="hp-retail">GH₵ 621</span>
         <span class="hp-perunit">GH₵ 22.50 / pc</span>
       </div>
     </div>
@@ -4068,27 +4066,24 @@ function parseQtyFromUnit(unit) {
   function perUnitChip(p, retail) {
     const q = parseQtyFromUnit(p.unit);
     if (!q || q < 2) {
-      // fallback: keep retail strikethrough only (no save tag, no per-unit)
-      return '<div class="card-savings"><span class="card-retail">GH\u20b5 ' + retail + '</span></div>';
+      return '';
     }
     const noun = unitNoun(p.unit);
     const per = (p.price / q);
     const formatted = per >= 100 ? Math.round(per) : (Math.round(per*100)/100).toFixed(2).replace(/\.?0+$/, '');
     return '<div class="card-savings">'
-      + '<span class="card-retail">GH\u20b5 ' + retail + '</span>'
       + '<span class="card-perunit">GH\u20b5 ' + formatted + ' / ' + noun + '</span>'
       + '</div>';
   }
   function perUnitChipHot(p, retail) {
     const q = parseQtyFromUnit(p.unit);
     if (!q || q < 2) {
-      return '<div class="hot-savings"><span class="hot-retail">GH\u20b5 ' + retail + '</span></div>';
+      return '';
     }
     const noun = unitNoun(p.unit);
     const per = (p.price / q);
     const formatted = per >= 100 ? Math.round(per) : (Math.round(per*100)/100).toFixed(2).replace(/\.?0+$/, '');
     return '<div class="hot-savings">'
-      + '<span class="hot-retail">GH\u20b5 ' + retail + '</span>'
       + '<span class="hot-perunit">GH\u20b5 ' + formatted + ' / ' + noun + '</span>'
       + '</div>';
   }
