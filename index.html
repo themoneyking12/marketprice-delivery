@@ -340,7 +340,7 @@
 
   /* Category-tinted image area */
   .hp-img {
-    margin: -14px -14px 12px;
+    background: #fff; margin: -14px -14px 12px;
     height: 130px;
     border-bottom: 2px solid var(--ink);
     display: flex;
@@ -359,10 +359,10 @@
     max-height: 85%;
     object-fit: contain;
   }
-  .hp-cat-food .hp-img { background: linear-gradient(135deg, #f4ede0 0%, #ede2cc 100%); }
-  .hp-cat-bev  .hp-img { background: linear-gradient(135deg, #e8f0e8 0%, #d4e6d8 100%); }
-  .hp-cat-house .hp-img { background: linear-gradient(135deg, #fff4e0 0%, #f5e4c0 100%); }
-  .hp-cat-baby .hp-img { background: linear-gradient(135deg, #fbe6ed 0%, #f0d4dc 100%); }
+  .hp-cat-food .hp-img { background: #fff; }
+  .hp-cat-bev  .hp-img { background: #fff; }
+  .hp-cat-house .hp-img { background: #fff; }
+  .hp-cat-baby .hp-img { background: #fff; }
 
   /* Tag badge */
   .hp-tag {
@@ -3760,11 +3760,11 @@
 
   function cardBg(cat) {
     const bgs = {
-      foodstuff: 'linear-gradient(135deg, #f4ede0 0%, #ede2cc 100%)',
-      beverages: 'linear-gradient(135deg, #e8f0e8 0%, #d4e6d8 100%)',
-      household: 'linear-gradient(135deg, #fff4e0 0%, #f5e4c0 100%)',
-      baby:      'linear-gradient(135deg, #fbe6ed 0%, #f0d4dc 100%)',
-      snacks:    'linear-gradient(135deg, #fdf0d9 0%, #f5dfb5 100%)',
+      foodstuff: '#fff',
+      beverages: '#fff',
+      household: '#fff',
+      baby:      '#fff',
+      snacks:    '#fff',
     };
     return bgs[cat] || bgs.foodstuff;
   }
