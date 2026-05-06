@@ -2461,6 +2461,89 @@
     .footer-grid { grid-template-columns: 1fr !important; }
   }
 
+  /* === Android UX patch: compact header + tap fixes === */
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  a, button, .tab, .add-btn, .pager-btn, .menu-toggle, .cart-btn { -webkit-tap-highlight-color: rgba(196,77,46,0.18); touch-action: manipulation; }
+  input, select, textarea { font-size: 16px; }
+
+  @media (max-width: 900px) {
+    /* Tighten header so cart + burger fit on narrow phones */
+    header { gap: 8px; padding: 10px 14px !important; }
+    .logo { font-size: 17px !important; gap: 8px !important; min-width: 0; flex: 1 1 auto; }
+    .logo small { display: block; font-size: 10px; opacity: 0.7; }
+    .logo-mark { width: 30px !important; height: 30px !important; flex: 0 0 30px; }
+    .logo > span:not(.logo-mark) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Compact cart button: show count chip only with cart icon */
+    .cart-btn { padding: 0 10px !important; font-size: 0 !important; min-height: 40px; min-width: 44px; gap: 4px !important; box-shadow: 3px 3px 0 var(--terracotta); }
+    .cart-btn::before { content: "🛒"; font-size: 18px; line-height: 1; }
+    .cart-btn .cart-count { font-size: 12px !important; }
+
+    .menu-toggle { width: 42px !important; height: 40px !important; flex: 0 0 42px; }
+
+    /* Promo ribbon smaller on phones */
+    .ribbon { font-size: 11px !important; }
+
+    /* Hero stack tighter */
+    .hero h1 { letter-spacing: -0.01em; }
+    .hp-card { min-height: 0; }
+
+    /* Section titles wrap nicely */
+    .section-title { word-break: break-word; }
+
+    /* Make tabs look like pills with active emphasis */
+    .tab { border-width: 2px; }
+    .tab.active { box-shadow: 3px 3px 0 var(--ink); }
+
+    /* Card grid: tighter gap, full-width Add button */
+    .grid { gap: 12px !important; }
+    .card { box-shadow: 3px 3px 0 var(--ink); }
+    .card-bottom { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; }
+    .add-btn { width: 100%; justify-content: center; }
+
+    /* Pager — full-width buttons sit nicely */
+    .pager-wrap { flex-wrap: wrap; justify-content: space-between !important; }
+    .pager-btn { flex: 1 1 0; }
+
+    /* Cart drawer respects bottom safe area */
+    .cart-drawer { padding-bottom: max(env(safe-area-inset-bottom), 16px); }
+    .cart-footer { padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important; }
+
+    /* Floating WhatsApp tappable */
+    .floating-wa { width: 52px !important; height: 52px !important; bottom: calc(20px + env(safe-area-inset-bottom)) !important; }
+
+    /* Smooth scroll-snap for category tabs already set; ensure scroll padding */
+    .tabs { scroll-padding-left: 14px; -webkit-overflow-scrolling: touch; }
+
+    /* Footer 1 col on real phones */
+    .footer-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+    footer { padding: 28px 18px 24px !important; }
+  }
+
+  @media (max-width: 480px) {
+    /* Hero hero-art down to 1 col so Milo/Ideal cards are bigger */
+    .hero-art { grid-template-columns: 1fr 1fr !important; }
+    .hp-img { height: 96px !important; }
+    .hero-actions { flex-wrap: wrap; }
+    .hero-actions .btn-primary { flex: 1 1 100%; }
+
+    /* Hot strip 2 cols already */
+    .hot-img { height: 96px !important; }
+
+    /* Logo subtitle hidden to free space on tiny phones */
+    .logo small { display: none; }
+  }
+
+  @media (max-width: 360px) {
+    header { padding: 8px 10px !important; }
+    .logo { font-size: 15px !important; }
+    .cart-btn { min-width: 40px; padding: 0 8px !important; }
+    .menu-toggle { width: 38px !important; flex: 0 0 38px; }
+    .section-title { font-size: 28px !important; }
+  }
+
+
 </style>
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
 <body data-new-gr-c-s-check-loaded="14.1286.0" data-gr-ext-installed="">
