@@ -452,6 +452,18 @@
     padding: 3px 6px;
     line-height: 1;
   }
+  .hp-perunit {
+    background: var(--terracotta-deep);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    line-height: 1;
+    border: 1px solid var(--terracotta-deep);
+  }
 
   /* === HERO ACTION BUTTONS (redesigned) === */
   .hero-actions {
@@ -2617,21 +2629,27 @@
     position: absolute;
     bottom: 8px;
     right: 8px;
-    min-width: 40px;
-    height: 40px;
-    padding: 0 8px;
+    min-width: 48px;
+    height: 48px;
+    padding: 0 10px;
     border-radius: 50%;
     background: #f5c518;
-    color: #111;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 15px;
+    border: 3px solid #d92027;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    color: #fff;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 18px;
     line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    text-shadow: 1px 1px 0 #b71c1c, -1px 1px 0 #b71c1c, 1px -1px 0 #b71c1c, -1px -1px 0 #b71c1c, 0 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: -0.02em;
+    z-index: 3;
     pointer-events: none;
+    transform: rotate(-6deg);
   }
   .card-perunit {
     display: inline-flex;
@@ -2751,13 +2769,13 @@
 <div class="hero-art">
   <a href="#shop" class="hp-card hp-cat-bev">
     <div class="hp-tag">Bestseller</div>
-    <div class="hp-img"><img src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/5/5/55700_1_1.jpg" alt="Milo 800g" loading="lazy" style="width:100%;height:100%;object-fit:contain;" onerror="this.outerHTML='<span class=&quot;hp-icon&quot;>☕</span>'"></div>
+    <div class="hp-img"><img src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/5/5/55700_1_1.jpg" alt="Milo 800g" loading="lazy" style="width:100%;height:100%;object-fit:contain;" onerror="this.outerHTML='<span class=&quot;hp-icon&quot;>☕</span>'"><span class="qty-badge" aria-hidden="true">×12</span></div>
     <div class="hp-meta">
       <h3>Milo 800g</h3>
       <p class="hp-unit">12pcs carton</p>
       <div class="hp-savings">
         <span class="hp-retail">GH₵ 891</span>
-        <span class="hp-save-tag">Save 116</span>
+        <span class="hp-perunit">GH₵ 64.58 / pc</span>
       </div>
     </div>
     <div class="hp-foot">
@@ -2767,13 +2785,13 @@
   </a>
   <a href="#shop" class="hp-card hp-cat-food">
     <div class="hp-tag">Popular</div>
-    <div class="hp-img"><img src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/i/d/ideal_original_370g.jpg" alt="Ideal Milk 370g" loading="lazy" style="width:100%;height:100%;object-fit:contain;" onerror="this.outerHTML='<span class=&quot;hp-icon&quot;>🥛</span>'"></div>
+    <div class="hp-img"><img src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/i/d/ideal_original_370g.jpg" alt="Ideal Milk 370g" loading="lazy" style="width:100%;height:100%;object-fit:contain;" onerror="this.outerHTML='<span class=&quot;hp-icon&quot;>🥛</span>'"><span class="qty-badge" aria-hidden="true">×24</span></div>
     <div class="hp-meta">
       <h3>Ideal Milk 370g</h3>
       <p class="hp-unit">24pcs carton</p>
       <div class="hp-savings">
         <span class="hp-retail">GH₵ 621</span>
-        <span class="hp-save-tag">Save 81</span>
+        <span class="hp-perunit">GH₵ 22.50 / pc</span>
       </div>
     </div>
     <div class="hp-foot">
