@@ -3457,7 +3457,7 @@ const _MEL = 'https[\s\S]*?\n\};  // ║   3. Copy the "Direct link" (ends in .j
     1295: _MEL+'1/0/102276b.jpg',
     1298: _MEL+'1/6/169948.png',
     1299: _MEL+'1/6/169948.png',
-    1402: _MEL+'9/2/92265a.jpg',
+    1402: _MEL+'9/2/92265a.jpg', 1003: _MEL+'i/d/ideal_mini_29g.jpg', 1041: _MEL+'2/6/26965.jpg', 1042: _MEL+'2/6/26965.jpg', 1043: _MEL+'2/6/26965.jpg', 1044: _MEL+'2/6/26965.jpg', 1045: _MEL+'2/6/26965.jpg', 1046: _MEL+'2/6/26965.jpg', 1047: _MEL+'2/6/26965.jpg', 1049: _MEL+'1/0/102311a.jpg', 1050: _MEL+'1/0/102311a.jpg', 1052: _MEL+'6/9/96222a.jpg', 1053: _MEL+'s/5/s597_1.jpg', 1054: _MEL+'s/7/s737_1.jpg', 1055: _MEL+'6/9/96222a.jpg', 1064: 'https://www.procusghana.com/pages/brands/kivo/kivocreamer.png', 1065: 'https://www.procusghana.com/pages/brands/kivo/kivocreamer.png', 1066: 'https://www.procusghana.com/pages/brands/kivo/kivocreamer.png', 1067: 'https://www.procusghana.com/pages/brands/kivo/kivocreamer.png', 1068: 'https://www.procusghana.com/pages/brands/kivo/kivobakedbeans.png', 1069: 'https://www.procusghana.com/pages/brands/kivo/kivobakedbeans.png', 1070: 'https://www.procusghana.com/pages/brands/kivo/kivobakedbeans.png', 1071: 'https://www.procusghana.com/pages/brands/kivo/kivo4in1.png', 1072: 'https://www.procusghana.com/pages/brands/kivo/kivo4in1.png', 1075: _MEL+'9/9/99602a.jpg', 1076: _MEL+'9/9/99602a.jpg', 1089: _MEL+'0/3/03825a.jpg', 1090: _MEL+'0/3/03825a.jpg', 1092: _MEL+'0/3/03825a.jpg', 1093: _MEL+'0/3/03825a.jpg',
     1403: _MEL+'1/3/13373a.jpg',
     1404: _MEL+'1/7/175877.png',
     // Currently empty — every product shows its emoji icon as fallback.
@@ -3492,7 +3492,7 @@ const _MEL = 'https[\s\S]*?\n\};  // ║   3. Copy the "Direct link" (ends in .j
     1264, // Heaven Coil - GH₵ 780
     1276, // Pot Matches - GH₵ 630
     1160, // Nutrisnax B/S - GH₵ 147
-    1001, // Carnation 160g - GH₵ 220
+    1001, 1011, 1051, // Carnation 160g, Milo 400g, Peak Green B/s
   ];
 
   // Retail savings — assumes 15% wholesale-to-retail markup (Ghana FMCG average).
@@ -3631,7 +3631,7 @@ const _MEL = 'https[\s\S]*?\n\};  // ║   3. Copy the "Direct link" (ends in .j
     if (remaining > 0) {
       const nextBatch = Math.min(PAGE_SIZE, remaining);
       moreBtn.style.display = 'inline-flex';
-      moreBtn.innerHTML = `Show ${nextBatch} more <span class="more-count">${shown.length} of ${items.length}</span>`;
+      moreBtn.innerHTML = `Show ${nextBatch} more <span class="more-count">${shown.length} of ${PRODUCTS.length}</span>`;
     } else {
       moreBtn.style.display = 'none';
     }
