@@ -2341,7 +2341,7 @@
 <div class="hero-art">
   <a href="#shop" class="hp-card hp-cat-bev">
     <div class="hp-tag">Bestseller</div>
-    <div class="hp-img"><span class="hp-icon">☕</span></div>
+    <div class="hp-img"><img src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/5/5/55700_1_1.jpg" alt="Milo 800g" loading="lazy" style="width:100%;height:100%;object-fit:contain;" onerror="this.outerHTML='<span class=&quot;hp-icon&quot;>☕</span>'"></div>
     <div class="hp-meta">
       <h3>Milo 800g</h3>
       <p class="hp-unit">12pcs carton</p>
@@ -2357,7 +2357,7 @@
   </a>
   <a href="#shop" class="hp-card hp-cat-food">
     <div class="hp-tag">Popular</div>
-    <div class="hp-img"><span class="hp-icon">🥛</span></div>
+    <div class="hp-img"><img src="https://melcom.com/media/catalog/product/cache/8757aa1374eaaf34b9fd32f9e760ba0b/i/d/ideal_original_370g.jpg" alt="Ideal Milk 370g" loading="lazy" style="width:100%;height:100%;object-fit:contain;" onerror="this.outerHTML='<span class=&quot;hp-icon&quot;>🥛</span>'"></div>
     <div class="hp-meta">
       <h3>Ideal Milk 370g</h3>
       <p class="hp-unit">24pcs carton</p>
@@ -2593,8 +2593,10 @@
       </div>
     </div>
 
-  <div class="show-more-wrap">
-    <button class="show-more-btn" id="showMoreBtn" onclick="showMore()" style="display: inline-flex;">Show 10 more <span class="more-count">10 of 64</span></button>
+  <div class="pager-wrap" id="pagerWrap" style="display:flex;justify-content:center;align-items:center;gap:14px;margin-top:28px;flex-wrap:wrap;">
+    <button class="pager-btn" id="prevPageBtn" onclick="prevPage()" style="padding:10px 18px;border:2px solid var(--ink);background:var(--paper);font-family:inherit;font-weight:700;cursor:pointer;border-radius:6px;">← Prev</button>
+    <span class="pager-info" id="pagerInfo" style="font-family:inherit;font-weight:600;min-width:140px;text-align:center;">Page 1 of 1</span>
+    <button class="pager-btn" id="nextPageBtn" onclick="nextPage()" style="padding:10px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);font-family:inherit;font-weight:700;cursor:pointer;border-radius:6px;">Next →</button>
   </div>
 </section>
 
@@ -3384,8 +3386,8 @@
   let selectedDelivery = { method: 'standard', name: 'Accra Standard', fee: 50, free: 2000 };
 
   // Catalog pagination — show 10 at a time, load 10 more on click.
-  const PAGE_SIZE = 9999;
-  let visibleCount = PAGE_SIZE;
+  const PAGE_SIZE = 20;
+  let currentPage = 1;
 
   // === PRODUCT IMAGES ===
   // Map of product ID → image URL. If a product has an entry here, that photo shows
@@ -3593,7 +3595,8 @@
 
   function renderGrid() {
     const items = activeCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === activeCat);
-    const shown = items.slice(0, visibleCount);
+    const startIdx = (currentPage - 1) * PAGE_SIZE;
+    const shown = items.slice(startIdx, startIdx + PAGE_SIZE);
     const remaining = items.length - shown.length;
 
     const cards = shown.map(p => {
@@ -3623,20 +3626,36 @@
 
     grid.innerHTML = cards;
 
-    // Show or hide the "Show more" button below the grid
-    const moreBtn = document.getElementById('showMoreBtn');
-    if (remaining > 0) {
-      const nextBatch = Math.min(PAGE_SIZE, remaining);
-      moreBtn.style.display = 'inline-flex';
-      moreBtn.innerHTML = `Show ${nextBatch} more <span class="more-count">${shown.length} of ${PRODUCTS.length}</span>`;
-    } else {
-      moreBtn.style.display = 'none';
+    // Update pager controls below the grid
+    const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
+    const prevBtn = document.getElementById('prevPageBtn');
+    const nextBtn = document.getElementById('nextPageBtn');
+    const info = document.getElementById('pagerInfo');
+    if (info) info.textContent = `Page ${currentPage} of ${totalPages}`;
+    if (prevBtn) prevBtn.disabled = (currentPage <= 1);
+    if (nextBtn) nextBtn.disabled = (currentPage >= totalPages);
+    if (prevBtn) prevBtn.style.opacity = prevBtn.disabled ? '0.4' : '1';
+    if (nextBtn) nextBtn.style.opacity = nextBtn.disabled ? '0.4' : '1';
+    if (prevBtn) prevBtn.style.cursor = prevBtn.disabled ? 'not-allowed' : 'pointer';
+    if (nextBtn) nextBtn.style.cursor = nextBtn.disabled ? 'not-allowed' : 'pointer';
+
+  function nextPage() {
+    const items = activeCat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === activeCat);
+    const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderGrid();
+      const grid = document.getElementById('grid');
+      if (grid) grid.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
   }
-
-  function showMore() {
-    visibleCount += PAGE_SIZE;
-    renderGrid();
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderGrid();
+      const grid = document.getElementById('grid');
+      if (grid) grid.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
   }
 
   // Custom cartoon-style product illustrations for sale items.
@@ -3773,7 +3792,7 @@
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     e.target.classList.add('active');
     activeCat = e.target.dataset.cat;
-    visibleCount = PAGE_SIZE;  // reset pagination when switching categories
+    currentPage = 1;  // reset pagination when switching categories
     renderGrid();
   });
 
